@@ -20,7 +20,7 @@ module.exports = {
         loader: "ts-loader",
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.(png|jpe?g|gif|pdf)$/,
         type: "asset/resource",
       },
       {

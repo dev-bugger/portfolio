@@ -1,5 +1,6 @@
 import logo from "assets/logo.png";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import resume from "assets/resume.pdf";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => (
   <Navbar as="header" sticky="top" collapseOnSelect expand="md">
@@ -22,7 +23,7 @@ const Header = () => (
           <Nav.Item>
             <Nav.Link href="#contact">Contact</Nav.Link>
           </Nav.Item>
-          {/* <Nav.Item>
+          <Nav.Item>
             <Button
               variant="outline-primary"
               href={resume}
@@ -31,7 +32,7 @@ const Header = () => (
             >
               Resume
             </Button>
-          </Nav.Item> */}
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Container>
