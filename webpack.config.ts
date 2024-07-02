@@ -1,5 +1,6 @@
 import CompressionWebpackPlugin from "compression-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
 import TerserWebpackPlugin from "terser-webpack-plugin";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
@@ -9,7 +10,7 @@ module.exports = {
   output: {
     filename: "bundle.js", // Output bundle file name
     path: path.resolve(__dirname, "build"), // Output directory,
-    publicPath: "/",
+    publicPath: "/portfolio/",
   },
   module: {
     rules: [
@@ -56,14 +57,18 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
+    new MiniCssExtractPlugin({
+      filename: "bundle.css",
+      ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
     new CompressionWebpackPlugin({
       algorithm: "gzip", // or 'brotliCompress'
       test: /\.(jsx?|tsx?|css|html|svg)$/,
       threshold: 10240, // files larger than 10kB will be compressed
       minRatio: 0.8, // only compress files that compress better than this ratio
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/index.html",
     }),
   ],
   resolve: {
