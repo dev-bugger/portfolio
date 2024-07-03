@@ -113,14 +113,12 @@ export const schoolList: TSchoolList = [
     degree: "12th CBSE",
     fieldOfStudy: "PCM + Computer Science",
     duration: "2015 - 2016",
-    cgpa: "80.4%",
   },
   {
     label: "Delhi Public School, Lucknow",
     degree: "10th CBSE",
     fieldOfStudy: "Computer Science",
     duration: "2013 - 2014",
-    cgpa: 9.4,
   },
 ];
 

@@ -8,7 +8,7 @@ const Education = () => {
       <h3 className="numbered-list">Knowledge Quest</h3>
       <div className="d-flex flex-column">
         {schoolList.map((tab) => (
-          <Card className="education-card">
+          <Card className="education-card" key={tab.degree}>
             <Card.Body>
               <Card.Title className="text-tertiary">{tab.label}</Card.Title>
               <Card.Subtitle className="mb-2 text-secondary">
@@ -17,7 +17,9 @@ const Education = () => {
               <Card.Subtitle className="mb-2 text-muted fs-6 fw-normal">
                 {tab.duration}
               </Card.Subtitle>
-              <Card.Text className="text-muted">Grade: {tab.cgpa}</Card.Text>
+              {!!tab.cgpa && (
+                <Card.Text className="text-muted">Grade: {tab.cgpa}</Card.Text>
+              )}
             </Card.Body>
           </Card>
         ))}

@@ -10,7 +10,7 @@ const AboutMe = () => {
     <section id="about_me">
       <h3 className="numbered-list">The Story of Me</h3>
       <Row>
-        <Col xs={12} sm={12} md={9}>
+        <Col xs={12} sm={12} md={12} lg={8} xl={9}>
           <p>
             I'm a seasoned full-stack developer with over{" "}
             <b className="fc-green">{experience} years</b>
@@ -54,7 +54,14 @@ const AboutMe = () => {
             Let's connect ☎️ and bring your <i>ideas to life!</i> ✨
           </p>
         </Col>
-        <Col xs={12} sm={12} md={3} className="image-wrapper p-0">
+        <Col
+          xs={12}
+          sm={12}
+          md={12}
+          lg={4}
+          xl={3}
+          className="image-wrapper p-0"
+        >
           <Image
             src={profilePhoto}
             rounded

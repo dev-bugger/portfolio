@@ -18,7 +18,7 @@ interface TSchoolListItem {
   degree: string;
   fieldOfStudy: string;
   duration: string;
-  cgpa: string | number;
+  cgpa?: string | number;
 }
 
 export interface TSchoolList extends Array<TSchoolListItem> {}

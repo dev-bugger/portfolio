@@ -12,7 +12,6 @@ const Experience = () => {
   const [idx, setIndex] = React.useState(0);
 
   const handleSelect = (selectedIndex: number) => {
-    console.log(selectedIndex);
     setIndex(selectedIndex);
   };
 
@@ -29,7 +28,7 @@ const Experience = () => {
         <div className="d-flex timeline-container flex-grow-1">
           <Nav className="timeline">
             {jobList.map((tab, index) => (
-              <Nav.Item>
+              <Nav.Item key={tab.label}>
                 <Nav.Link eventKey={index}>{tab.label}</Nav.Link>
               </Nav.Item>
             ))}
@@ -44,7 +43,7 @@ const Experience = () => {
           </Nav>
           <Tab.Content className="timeline-content h-100">
             {jobList.map((job, index) => (
-              <Tab.Pane eventKey={index} className="h-100">
+              <Tab.Pane eventKey={index} className="h-100" key={job.label}>
                 <div
                   className={`d-flex align-items-center ${
                     !isTabVertical ? "px-3" : "px-0"
@@ -74,7 +73,7 @@ const Experience = () => {
                     <p>{job.designations?.[idx]?.location}</p>
                     <ul className="arrow-list">
                       {job.designations?.[idx]?.description.map((point) => (
-                        <li>{point}</li>
+                        <li key={point}>{point}</li>
                       ))}
                     </ul>
                   </div>

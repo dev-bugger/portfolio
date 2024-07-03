@@ -8,7 +8,7 @@ const Skills = () => {
       <h3 className="numbered-list">Skills & Superpowers</h3>
       <Row className="justify-content-center">
         {skillList.map((tab) => (
-          <Col sm={4} md={3}>
+          <Col xs={12} sm={4} md={4} lg={3} xl={3} key={tab.label}>
             <Card className="education-card mb-4">
               <Card.Body className="align-items-center justify-content-center d-flex flex-column">
                 <Card.Img
