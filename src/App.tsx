@@ -21,8 +21,8 @@ const App = () => {
 
   if (loading)
     return (
-      <div className="d-flex h-100 w-100 loader">
-        <Image src={logo} alt="logo" className="m-auto" />
+      <div className="d-flex h-100 w-100 loader align-items-center justify-content-center">
+        <Image src={logo} alt="logo" />
       </div>
     );
 

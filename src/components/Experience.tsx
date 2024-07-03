@@ -25,7 +25,7 @@ const Experience = () => {
           setKey(k || "0");
         }}
       >
-        <div className="d-flex timeline-container flex-grow-1">
+        <div className="d-flex timeline-container">
           <Nav className="timeline">
             {jobList.map((tab, index) => (
               <Nav.Item key={tab.label}>
