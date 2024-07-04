@@ -51,7 +51,6 @@ body {
 
 main {
   overflow: auto;
-  counter-reset: section 0;
 }
 
 main > section {
@@ -173,8 +172,6 @@ h6 {
   margin-bottom: 1rem;
 }
 .numbered-list::before {
-  counter-increment: section;
-  content: "0" counter(section) ". ";
   color: var(--text-highlight);
   font-family: var(--font-family-spl-elite);
   font-size: 1.25rem;
@@ -188,6 +185,22 @@ h6 {
   margin: auto 0;
   margin-left: 1.25rem;
   background-color: var(--bg-primary-lightest);
+}
+
+#about .numbered-list::before {
+  content: "01.";
+}
+#experience .numbered-list::before {
+  content: "02.";
+}
+#education .numbered-list::before {
+  content: "03.";
+}
+#skills .numbered-list::before {
+  content: "04.";
+}
+#contact .numbered-list::before {
+  content: "05.";
 }
 
 .image-wrapper {

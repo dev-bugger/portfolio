@@ -7,7 +7,7 @@ const AboutMe = () => {
   const experience = React.useMemo(calculateExperience, []);
 
   return (
-    <section id="about_me">
+    <section id="about">
       <h3 className="numbered-list">The Story of Me</h3>
       <Row>
         <Col xs={12} sm={12} md={12} lg={8} xl={9}>

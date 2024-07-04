@@ -23,6 +23,11 @@ const Header = () => (
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
+            <Nav.Link as={Link} to="/education">
+              Education
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <Nav.Link as={Link} to="/skills">
               Skills
             </Nav.Link>
