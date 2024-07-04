@@ -76,10 +76,9 @@ module.exports = {
     plugins: [new TsconfigPathsPlugin({})],
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, "public"),
-    },
     compress: true,
     port: 3000,
+    historyApiFallback: true,
+    static: path.join(__dirname, "build"),
   },
 };
