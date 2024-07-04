@@ -10,3 +10,8 @@ export const calculateExperience = () => {
 
   return `${years}${total - years > 0 ? "+" : ""}`;
 };
+
+export const isRouteActive = (
+  path: string,
+  currentActivePath: string
+): boolean => currentActivePath === path;

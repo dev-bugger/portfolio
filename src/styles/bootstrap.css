@@ -3,7 +3,7 @@
   --bs-border-width: 0.0625rem;
 }
 .navbar {
-  --bs-navbar-toggler-icon-bg: url("./assets/three-dots-vertical.svg");
+  --bs-navbar-toggler-icon-bg: url("../assets/three-dots-vertical.svg");
   --bs-navbar-active-color: var(--text-secondary);
   --bs-navbar-toggler-focus-width: 0.0625rem;
 }

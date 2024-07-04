@@ -164,3 +164,26 @@ export const skillList: TSkillList = [
     icon: "https://p7.hiclipart.com/preview/747/798/387/mysql-database-web-development-computer-software-dolphin.jpg",
   },
 ];
+
+export const headerNavList = [
+  {
+    label: "About",
+    to: "/about",
+  },
+  {
+    label: "Experience",
+    to: "/experience",
+  },
+  {
+    label: "Education",
+    to: "/education",
+  },
+  {
+    label: "Skills",
+    to: "/skills",
+  },
+  {
+    label: "Contact",
+    to: "/contact",
+  },
+];
