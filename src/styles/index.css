@@ -51,11 +51,15 @@ body {
   overflow: hidden;
 }
 
+view section {
+  flex-direction: row;
+}
+
 main {
   overflow: auto;
 }
 
-main > section {
+main section {
   min-height: 100%;
   padding: 3rem 8rem;
   margin: 0 auto;
@@ -150,13 +154,17 @@ h6 {
   width: 3rem;
 }
 
-.socials-nav::after {
-  content: "";
-  display: block;
-  width: 0.0625rem;
-  height: 8rem;
-  margin: 0 auto;
-  background-color: var(--text-primary);
+.socials-nav {
+  flex-direction: column;
+  justify-content: flex-end;
+  &::after {
+    content: "";
+    display: block;
+    width: 0.0625rem;
+    height: 8rem;
+    margin: 0 auto;
+    background-color: var(--text-primary);
+  }
 }
 
 .numbered-list {
@@ -217,7 +225,7 @@ h6 {
   --tab-width: 8rem;
   flex-direction: column;
   width: 25%;
-  overflow: hidden;
+  overflow: auto;
 }
 .timeline-content {
   width: 75%;
@@ -316,9 +324,30 @@ h6 {
   #contact {
     max-width: 100%;
   }
-  main > section {
+  view > section {
+    flex-direction: column-reverse;
+  }
+  main section {
     padding: 10% 0;
     margin: 0 3rem;
+  }
+  .socials-nav {
+    flex-direction: row;
+    &::after {
+      width: unset;
+      height: 0.0625rem;
+      flex: 1;
+      margin: auto 0;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: unset;
+      height: 0.0625rem;
+      margin: auto 0;
+      flex: 1;
+      background-color: var(--text-primary);
+    }
   }
   .image-wrapper {
     width: 50%;
@@ -361,4 +390,3 @@ h6 {
     --tab-width: 6rem;
   }
 }
-

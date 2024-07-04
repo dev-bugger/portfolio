@@ -5,7 +5,7 @@ import { Nav } from "react-bootstrap";
 
 const Socials = () => {
   return (
-    <Nav className="socials-nav flex-column justify-content-end">
+    <Nav className="socials-nav">
       <Nav.Link href="https://github.com/dev-bugger/" target="_blank">
         <GitHubIcon />
       </Nav.Link>
