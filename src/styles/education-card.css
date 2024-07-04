@@ -1,0 +1,7 @@
+.education-card {
+  background-color: var(--app-background);
+  border-color: var(--text-highlight-tint);
+}
+.education-card:not(:last-child) {
+  margin-bottom: 0.625rem;
+}

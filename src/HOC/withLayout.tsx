@@ -5,7 +5,7 @@ const withLayout = <P extends object>(
   WrappedComponent: ComponentType<P>
 ): ComponentType<P> => {
   return (props) => (
-    <view className="d-flex flex-column h-100 w-100">
+    <div className="d-flex flex-column h-100 w-100 view">
       <Header />
       <section className="overflow-hidden d-flex flex-grow-1">
         <Socials />
@@ -13,7 +13,7 @@ const withLayout = <P extends object>(
           <WrappedComponent {...props} />
         </main>
       </section>
-    </view>
+    </div>
   );
 };
 

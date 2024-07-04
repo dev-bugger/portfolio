@@ -1,0 +1,79 @@
+:root {
+  --bs-border-radius: 0.5rem;
+  --bs-border-width: 0.0625rem;
+
+  --bg-primary: #0a192f;
+  --bg-primary-light: #112240;
+  --bg-primary-lightest: #233554;
+
+  --text-tertiary: #ffffff;
+  --text-primary: #a8b2d1;
+  --text-secondary: #495670;
+  --text-muted: #ccd6dd;
+
+  --text-highlight: #64ffda;
+  --text-highlight-tint: rgba(100, 255, 218, 0.1);
+
+  --font-family-spl-elite: "Special Elite", cursive;
+  --font-family-ubuntu: "Ubuntu", sans-serif;
+  --font-family-seymour-one: "Seymour One", sans-serif;
+
+  --app-background: linear-gradient(
+    to right,
+    var(--bg-primary),
+    var(--bg-primary-light)
+  );
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-secondary);
+  border-radius: var(--bs-border-radius);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-ubuntu);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--app-background);
+  color: var(--text-primary);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+  color: var(--text-tertiary);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-seymour-one);
+}
+h4,
+h6 {
+  font-family: var(--font-family-spl-elite);
+}
+
+.fc-green {
+  color: var(--text-highlight);
+}

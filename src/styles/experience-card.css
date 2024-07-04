@@ -1,0 +1,109 @@
+.nav-btn {
+  --bs-btn-color: var(--text-highlight);
+  --bs-btn-border-color: transparent;
+  --bs-btn-bg: transparent;
+  /* --bs-btn-focus-shadow-rgb: 49, 132, 253; */
+  --bs-btn-active-color: var(--text-highlight-tint);
+  --bs-btn-active-bg: transparent;
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-color: var(--text-highlight-tint);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: transparent;
+  --bs-btn-hover-color: var(--text-highlight-tint);
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+}
+
+.timeline {
+  position: relative;
+  --tab-height: 2.5rem;
+  --tab-width: 8rem;
+  flex-direction: column;
+  width: 25%;
+  overflow: auto;
+  > .nav-item {
+    border-left: 0.0625rem solid var(--bg-primary-lightest);
+    font-weight: 300;
+    height: var(--tab-height);
+    width: 100%;
+  }
+  > * > a {
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .active {
+    color: var(--text-highlight);
+    background-color: var(--text-highlight-tint);
+  }
+}
+.timeline-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 0.125rem;
+  height: var(--tab-height);
+  border-radius: var(--bs-border-radius);
+  background: var(--text-highlight);
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.timeline-content {
+  width: 75%;
+}
+
+.arrow-list {
+  padding: 0;
+  margin: 0;
+  > li {
+    list-style: none;
+  }
+  > li:not(:last-child) {
+    padding-bottom: 0.75rem;
+  }
+  > li::before {
+    content: "\00BB";
+    color: var(--text-highlight);
+    padding-right: 1rem;
+  }
+}
+
+@media ((max-width: 768px)) {
+  .timeline {
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 0.0625rem solid var(--bg-primary-lightest);
+    margin-bottom: 1rem;
+    flex-wrap: nowrap;
+    --tab-width: 9rem;
+  }
+  .timeline-indicator {
+    height: 0.125rem;
+    width: 100%;
+    max-width: var(--tab-width);
+    bottom: 0;
+    top: auto;
+  }
+  .timeline > .nav-item {
+    border-left: none;
+    height: fit-content;
+    width: fit-content;
+  }
+  .timeline > * > a {
+    width: var(--tab-width);
+    text-align: center;
+  }
+  .timeline-content {
+    width: 100%;
+  }
+  .timeline-container {
+    flex-direction: column;
+  }
+}
+
+@media ((max-width: 576px)) {
+  .timeline {
+    --tab-width: 6rem;
+  }
+}
