@@ -6,6 +6,7 @@ import path from "path";
 import TerserWebpackPlugin from "terser-webpack-plugin";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { DefinePlugin } from "webpack";
+import CopyPlugin from "copy-webpack-plugin";
 
 const envVar = dotenv.config({
   path: "./.env",
@@ -79,6 +80,9 @@ module.exports = (env) => ({
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new CopyPlugin({
+      patterns: [{ from: "./public/404.html", to: "./404.html" }],
     }),
   ],
   resolve: {
