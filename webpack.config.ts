@@ -1,11 +1,18 @@
 import CompressionWebpackPlugin from "compression-webpack-plugin";
+import dotenv from "dotenv";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
 import TerserWebpackPlugin from "terser-webpack-plugin";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+import { DefinePlugin } from "webpack";
 
-module.exports = {
+const envVar = dotenv.config({
+  path: "./.env",
+});
+
+module.exports = (env) => ({
+  mode: env.production ? "production" : "development",
   entry: "./src/index.tsx", // Entry point of your application
   output: {
     filename: "bundle.js", // Output bundle file name
@@ -57,6 +64,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new DefinePlugin({
+      "process.env": JSON.stringify(envVar.parsed),
+    }),
     new MiniCssExtractPlugin({
       filename: "bundle.css",
       ignoreOrder: false, // Enable to remove warnings about conflicting order
@@ -77,8 +87,8 @@ module.exports = {
   },
   devServer: {
     compress: true,
-    port: 3000,
+    port: process.env.DEV_PORT,
     historyApiFallback: true,
     static: path.join(__dirname, "build"),
   },
-};
+});
