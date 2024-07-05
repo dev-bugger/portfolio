@@ -43,7 +43,7 @@
     "build": "webpack --mode production",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "start:prod": "node server.js"
+    "start:prod": "docker-compose up"
   },
   "eslintConfig": {
     "extends": [
