@@ -6,18 +6,23 @@
   --bg-primary-light: #112240;
   --bg-primary-lightest: #233554;
 
-  --text-tertiary: #ffffff;
-  --text-primary: #a8b2d1;
-  --text-secondary: #495670;
+  --text-white: #ffffff;
+  --text-primary: #8892b0;
+  --text-secondary: #a8b2d1;
+  --text-tertiary: #ccd6f6;
   --text-muted: #ccd6dd;
 
   --text-highlight: #64ffda;
   --text-highlight-tint: rgba(100, 255, 218, 0.1);
 
   --font-family-spl-elite: "Special Elite", cursive;
-  --font-family-ubuntu: "Ubuntu", sans-serif;
-  --font-family-seymour-one: "Seymour One", sans-serif;
 
+  --font-family-heading: "Paytone One", sans-serif;
+  --font-family-body: "Poppins", sans-serif;
+  --font-family-sub-heading: "Rajdhani", sans-serif;
+  --font-family-caption: "Shadows Into Light", cursive;
+
+  --text-body: var(--text-primary);
   --app-background: linear-gradient(
     to right,
     var(--bg-primary),
@@ -26,8 +31,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--text-secondary);
@@ -36,15 +41,16 @@
 
 html {
   font-size: 16px;
+  font-optical-sizing: auto;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-family-ubuntu);
+  font-family: var(--font-family-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--app-background);
-  color: var(--text-primary);
+  color: var(--text-body);
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -62,16 +68,16 @@ h2,
 h3,
 h4,
 h6 {
-  color: var(--text-tertiary);
+  color: var(--text-white);
 }
 h1,
 h2,
 h3 {
-  font-family: var(--font-family-seymour-one);
+  font-family: var(--font-family-heading);
 }
 h4,
 h6 {
-  font-family: var(--font-family-spl-elite);
+  font-family: var(--font-family-sub-heading);
 }
 
 .fc-green {

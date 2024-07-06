@@ -4,11 +4,13 @@ interface TJob {
   duration: string;
   description: Array<string>;
   location: string;
+  skills: string[];
 }
 
 interface TJobListItem {
   label: string;
   designations: Array<TJob>;
+  href: string;
 }
 
 export interface TJobList extends Array<TJobListItem> {}
@@ -23,9 +25,15 @@ interface TSchoolListItem {
 
 export interface TSchoolList extends Array<TSchoolListItem> {}
 
-interface TSkillListItem {
+interface TSkill {
   label: string;
   icon: string;
+}
+
+interface TSkillListItem {
+  label: string;
+  skills: Array<TSkill>;
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 }
 
 export interface TSkillList extends Array<TSkillListItem> {}

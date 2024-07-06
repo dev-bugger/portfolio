@@ -10,6 +10,7 @@ const Header = () => {
 
   return (
     <Navbar
+      id="header"
       as="header"
       sticky="top"
       collapseOnSelect

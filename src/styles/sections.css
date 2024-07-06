@@ -8,25 +8,19 @@ main {
   overflow: auto;
   section {
     min-height: 100%;
-    padding: 3rem 8rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding-inline: 10%;
+    padding-block: 2rem;
   }
 }
 
 .app-body {
-  animation: fadeInAnimation ease 2s;
+  animation: fadeIn ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
-
-#about #contact {
-  justify-content: center;
-}
-
-#home {
-  padding: 10%;
 }
 
 .loader {
@@ -49,7 +43,7 @@ main {
   margin-bottom: 1rem;
   &::before {
     color: var(--text-highlight);
-    font-family: var(--font-family-spl-elite);
+    font-family: var(--font-family-sub-heading);
     font-size: 1.25rem;
     margin-right: 0.75rem;
   }
@@ -85,9 +79,5 @@ main {
     & > section {
       flex-direction: column-reverse;
     }
-  }
-  main section {
-    padding: 10% 0;
-    margin: 0 3rem;
   }
 }

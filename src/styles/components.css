@@ -1,0 +1,284 @@
+.arrow-list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  > li {
+    list-style: none;
+  }
+  > li:not(:last-child) {
+    padding-bottom: 0.75rem;
+  }
+  > li::before {
+    content: "\00BB";
+    color: var(--text-highlight);
+    padding-right: 0.5rem;
+  }
+}
+
+#header {
+  border-bottom: 0.0625rem solid var(--text-highlight-tint);
+  .navbar-collapse {
+    padding: 0;
+  }
+  .header-list > .nav-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &.active {
+      background-color: var(--text-highlight-tint);
+      border: 0.0625rem dashed var(--text-highlight-tint);
+      font-weight: bold;
+    }
+  }
+  @media ((max-width: 768px)) {
+    .navbar-collapse {
+      padding-bottom: 1rem;
+    }
+    .header-list > .nav-item {
+      &.active {
+        background-color: transparent;
+        border: none;
+        border-right: 0.25rem solid var(--text-highlight);
+        font-weight: bold;
+        border-radius: 0.0625rem;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+}
+
+#home {
+  .container {
+    align-items: center;
+  }
+  .image-wrapper {
+    position: relative;
+    animation: slideRightToLeft 1s ease-in forwards;
+    img {
+      width: 100%;
+      margin: auto;
+      border-radius: 50%;
+      box-shadow: 0.5rem 0.5rem 1rem rgba(100, 255, 219, 0.078),
+        -0.3rem -0.3rem 0.5rem rgba(100, 255, 219, 0.045);
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.25rem;
+      left: 0.5rem;
+      height: 100%;
+      width: 100%;
+      border: 0.0625rem solid var(--text-highlight);
+      z-index: -1;
+      border-radius: 50%;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    &:hover {
+      img {
+        transform: translate(-0.25rem, -0.25rem);
+      }
+      &::after {
+        transform: translate(0.25rem, 0.25rem);
+      }
+    }
+  }
+  h4 {
+    color: var(--text-highlight);
+    animation: slideDown 1s ease-in forwards;
+    animation-delay: 0ms;
+    font-family: var(--font-family-caption);
+  }
+  h1 {
+    color: var(--text-white);
+    animation: slideUp 1s ease-in forwards;
+    animation-delay: 0ms;
+  }
+  h3 {
+    color: var(--text-primary);
+    margin-bottom: 3vw;
+    animation: slideUp 1s ease-in forwards;
+    animation-delay: 0ms;
+  }
+  p {
+    font-size: calc(1rem + 0.3vw);
+    color: var(--text-highlight);
+    animation: slideUp 1s ease-in forwards;
+    animation-delay: 0ms;
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      align-items: flex-start;
+      flex-direction: column-reverse;
+    }
+    .image-wrapper {
+      position: relative;
+      width: 40%;
+      margin-block-end: 4rem;
+      img {
+        border-radius: var(--bs-border-radius);
+      }
+      &::after {
+        top: 1rem;
+        left: 1rem;
+        border-radius: var(--bs-border-radius);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .image-wrapper {
+      width: 50%;
+    }
+  }
+}
+
+#skills {
+  .card {
+    background-color: var(--bg-primary-light);
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2),
+      0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1), 0 0.3rem 0.5rem rgba(0, 0, 0, 0.05);
+  }
+  .card:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+}
+
+#experience {
+  .container {
+    h6 {
+      color: var(--text-primary);
+    }
+    p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    ul {
+      color: var(--text-tertiary);
+      font-size: 0.875rem;
+    }
+    .card-link {
+      text-decoration: none;
+    }
+    .card {
+      flex-direction: row;
+      background: transparent;
+      color: var(--text-white);
+      border: none;
+      padding: 1rem;
+      .card-title {
+        font-weight: 300;
+        font-size: 0.875rem;
+        span {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      .card-body {
+        padding: 0;
+      }
+      &:hover {
+        background-color: rgba(30, 41, 59, 0.5);
+        border: 1px solid var(--text-highlight-tint);
+        filter: drop-shadow(0 0.875rem 0.5rem rgba(0, 0, 0, 0.04))
+          drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
+        svg {
+          scale: 1.25;
+        }
+      }
+      .badge-list {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+#socials {
+  &.socials-nav {
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    &::after {
+      content: "";
+      display: block;
+      width: 0.0625rem;
+      height: 8rem;
+      margin: 0 auto;
+      background-color: var(--text-primary);
+    }
+  }
+
+  @media ((max-width: 768px)) {
+    &.socials-nav {
+      flex-direction: row;
+      &::after {
+        width: unset;
+        height: 0.0625rem;
+        flex: 1;
+        margin: auto 0;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: unset;
+        height: 0.0625rem;
+        margin: auto 0;
+        flex: 1;
+        background-color: var(--text-primary);
+      }
+    }
+  }
+}
+
+#contact {
+  @media (min-width: 768px) {
+    padding-inline: 25%;
+  }
+}
+
+#skills {
+  .card {
+    height: 20rem;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    .card-body {
+      gap: 1rem;
+      .card-front {
+        display: contents;
+      }
+      .card-back {
+        display: none;
+      }
+      ul {
+        li {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+        }
+      }
+    }
+    &:hover {
+      animation: flip 1s forwards;
+      .card-body {
+        animation: fadeIn 2s ease-in;
+        transform: rotateY(180deg);
+        .card-front {
+          display: none;
+        }
+        .card-back {
+          display: contents;
+        }
+      }
+    }
+    &:not(:hover) {
+      animation: flip-back 0.8s forwards; /* Animate back when hover ends */
+    }
+  }
+}

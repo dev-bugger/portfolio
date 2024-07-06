@@ -1,10 +1,13 @@
+:root {
+  --bs-border-width: 0.0625rem;
+}
 .navbar {
   --bs-navbar-toggler-icon-bg: url("../assets/three-dots-vertical.svg");
   --bs-navbar-active-color: var(--text-secondary);
   --bs-navbar-toggler-focus-width: 0.0625rem;
 }
 .nav-link {
-  --bs-nav-link-color: var(--text-tertiary);
+  --bs-nav-link-color: var(--text-white);
 }
 .nav-link:hover {
   --bs-nav-link-hover-color: rgba(255, 255, 255, 0.577);
@@ -27,7 +30,19 @@
   --bs-gradient: none;
 }
 .card {
-  --bs-card-border-width: 0.0625rem;
+  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-title-color: var(--text-white);
+  --bs-card-color: var(--text-body);
+}
+
+.badge {
+  --bs-primary-rgb: var(--text-highlight-tint);
+  --bs-badge-border-width: var(--bs-border-width);
+  --bs-badge-border-color: var(--text-highlight-tint);
+  border: var(--bs-badge-border-width) solid var(--bs-badge-border-color);
+  background-color: var(--bs-primary-rgb) !important;
+  --bs-badge-color: var(--text-highlight);
+  --bs-badge-font-weight: 400;
 }
 
 .text-muted {
@@ -37,7 +52,7 @@
   color: var(--text-secondary) !important;
 }
 .text-tertiary {
-  color: var(--text-tertiary) !important;
+  color: var(--text-white) !important;
 }
 
 .navbar-toggler {
