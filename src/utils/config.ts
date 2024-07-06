@@ -35,7 +35,7 @@ export const jobList: TJobList = [
         title: "Associate Software Engineer - II",
         company: "HighRadius",
         duration: "July 2022 - January 2023 \u2022 7 mos",
-        location: "Bhubaneswar, Orissa, India",
+        location: "Bhubaneswar, Odisha, India",
         description: [
           "Planned and executed the creation of a design system and a modular and reusable ReactJS component library for the CFOTech application suite.",
           "Improved the stability and performance and delivered several use cases for APaaS, a Low Code/No Code platform.",
@@ -47,7 +47,7 @@ export const jobList: TJobList = [
         title: "Associate Software Engineer - I",
         company: "HighRadius",
         duration: "June 2021 - July 2022 \u2022 1 yr",
-        location: "Bhubaneswar, Orissa, India",
+        location: "Bhubaneswar, Odisha, India",
         description: [
           "Managed and mentored a team of 9 interns to ensure high-quality delivery of product features.",
           "Analyzed requirements, proposed technical designs, and supervised the development and testing processes for various user stories.",
@@ -59,7 +59,7 @@ export const jobList: TJobList = [
         title: "Software Engineer Intern",
         company: "HighRadius",
         duration: "July 2020 - June 2021 \u2022 1 yr",
-        location: "Bhubaneswar, Orissa, India",
+        location: "Bhubaneswar, Odisha, India",
         description: [
           "Worked with Autonomous team on live projects.",
           "Spearheaded the development of innovative features using JavaScript, ReactJS, Redux, and Material UI to enhance application functionality.",
@@ -71,7 +71,7 @@ export const jobList: TJobList = [
         title: "Summer Intern",
         company: "HighRadius",
         duration: "April - June 2020 \u2022 3 mos",
-        location: "Bhubaneswar, Orissa, India",
+        location: "Bhubaneswar, Odisha, India",
         description: [
           "Developed an AI-Enabled FinTech B2B Invoice Management Application that empowers AR analysts to efficiently monitor and manage payments in the dynamic B2B environment.",
           "Designed intuitive UI with ReactJS and Material-UI for seamless user experience.",
@@ -97,28 +97,6 @@ export const jobList: TJobList = [
         ],
       },
     ],
-  },
-];
-
-export const schoolList: TSchoolList = [
-  {
-    label: "Kalinga Institute of Industrial Technology, Bhubaneswar",
-    degree: "Bachelor of Technology - BTech",
-    fieldOfStudy: "Computer Science",
-    duration: "2017 - 2021",
-    cgpa: 9.2,
-  },
-  {
-    label: "Delhi Public School, Lucknow",
-    degree: "12th CBSE",
-    fieldOfStudy: "PCM + Computer Science",
-    duration: "2015 - 2016",
-  },
-  {
-    label: "Delhi Public School, Lucknow",
-    degree: "10th CBSE",
-    fieldOfStudy: "Computer Science",
-    duration: "2013 - 2014",
   },
 ];
 
@@ -173,10 +151,6 @@ export const headerNavList = [
   {
     label: "Experience",
     to: "/experience",
-  },
-  {
-    label: "Education",
-    to: "/education",
   },
   {
     label: "Skills",

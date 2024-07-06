@@ -12,7 +12,6 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
 }
 
@@ -22,10 +21,8 @@ main {
   animation-fill-mode: forwards;
 }
 
-#about_me,
-#education,
-#contact {
-  max-width: 80%;
+#about #contact {
+  justify-content: center;
 }
 
 #home {
@@ -73,27 +70,16 @@ main {
 #experience .numbered-list::before {
   content: "02.";
 }
-#education .numbered-list::before {
+#skills .numbered-list::before {
   content: "03.";
 }
-#skills .numbered-list::before {
-  content: "04.";
-}
 #contact .numbered-list::before {
-  content: "05.";
+  content: "04.";
 }
 
 @media ((max-width: 768px)) {
   #home {
     padding: 10% 0;
-  }
-  #home,
-  #about_me,
-  #experience,
-  #skills,
-  #education,
-  #contact {
-    max-width: 100%;
   }
   .view {
     & > section {

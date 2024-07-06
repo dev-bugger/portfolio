@@ -1,12 +1,5 @@
 import withLayout from "HOC/withLayout";
-import {
-  AboutMe,
-  Contact,
-  Education,
-  Experience,
-  Intro,
-  Skills,
-} from "components";
+import { AboutMe, Contact, Experience, Intro, Skills } from "components";
 import { Navigate, RouteObject } from "react-router-dom";
 
 const routes: RouteObject[] = [
@@ -17,10 +10,6 @@ const routes: RouteObject[] = [
   {
     path: "about",
     Component: withLayout(AboutMe),
-  },
-  {
-    path: "education",
-    Component: withLayout(Education),
   },
   {
     path: "experience",

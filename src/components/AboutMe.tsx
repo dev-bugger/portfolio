@@ -21,22 +21,11 @@ const AboutMe = () => {
           </p>
 
           <p>
-            Professionally, I'm proficient in&nbsp;<b>ReactJS</b>,&nbsp;
-            <b>Angular</b>, <b>Redux</b>, <b>JavaScript</b>, <b>TypeScript</b>,{" "}
-            <b>NodeJS</b>, <b>Java</b>, <b>Spring Boot</b>, <b>Hibernate</b>,
-            and <b>MySQL</b>. Recently, I've been diving into{" "}
-            <b>React Native</b>, <b>Express</b>, and <b>MongoDB</b>, constantly
-            expanding my toolkit to stay at the forefront of technology. 👩🏻‍💻
-          </p>
-
-          <p>
             Beyond coding, I'm an avid <b>traveler</b> chasing my{" "}
             <b>wanderlust</b> around the globe ✈️, experimenting with new{" "}
             <b>recipes</b> in the kitchen 🍜, burying myself in{" "}
             <b>captivating books</b> 📚, hitting the <b>gym</b> to stay active
-            🏋️, and <b>spiking</b> on the volleyball court 🏐. As an ex-NCC
-            Cadet, I bring a disciplined approach to everything I do, drawing
-            from experiences in various state-level camps.
+            🏋️, and <b>spiking</b> on the volleyball court 🏐.
           </p>
 
           <p>
