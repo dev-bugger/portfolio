@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-bootstrap";
 import { calculateExperience } from "utils/common";
 
 const AboutMe = () => {
@@ -9,7 +10,7 @@ const AboutMe = () => {
       <h3 className="numbered-list">About Me</h3>
 
       <p>
-        I'm a seasoned full-stack developer with over{" "}
+        I'm a seasoned full-stack developer with{" "}
         <b className="fc-green">{experience} years</b>
         <b> of experience</b>, specializing in{" "}
         <b className="fc-green">frontend development</b>. I thrive on the
@@ -27,9 +28,13 @@ const AboutMe = () => {
 
       <p>
         Currently, I'm bringing my skills and passion to{" "}
-        <a href="https://www.visa.com/" className="fc-green">
+        <NavLink
+          href="https://www.visa.com/"
+          target="_blank"
+          className="d-inline-flex fc-green"
+        >
           Visa
-        </a>
+        </NavLink>
         , <b>a global leader in digital payments technology</b> 💳 , where I
         specialize in creating and scaling <i>UI applications</i>. I'm dedicated
         to enhancing digital payment experiences and driving innovation in

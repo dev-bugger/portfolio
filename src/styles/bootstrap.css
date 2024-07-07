@@ -1,7 +1,7 @@
 :root {
   --bs-border-width: 0.0625rem;
   --bs-body-color: var(--text-body);
-  --bs-body-bg: var(--app-background)
+  --bs-body-bg: var(--app-background);
 }
 .navbar {
   --bs-navbar-toggler-icon-bg: url("../assets/three-dots-vertical.svg");
@@ -9,10 +9,10 @@
   --bs-navbar-toggler-focus-width: 0.0625rem;
 }
 .nav-link {
-  --bs-nav-link-color: var(--text-white);
+  --bs-nav-link-color: var(--text-tertiary);
 }
 .nav-link:hover {
-  --bs-nav-link-hover-color: rgba(255, 255, 255, 0.577);
+  --bs-nav-link-hover-color: var(--text-secondary);
 }
 
 .btn-outline-primary {

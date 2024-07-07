@@ -141,6 +141,18 @@ ul.arrow-list {
   }
 }
 
+#about {
+  a {
+    &.nav-link {
+      --bs-nav-link-color: var(--text-highlight);
+      &:hover {
+        --bs-nav-link-hover-color: var(--text-highlight);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 #skills {
   .container {
     display: flex;
@@ -175,6 +187,7 @@ ul.arrow-list {
       }
       .card-title {
         color: var(--text-secondary);
+        text-align: center;
       }
       svg {
         font-size: 4rem;
@@ -222,7 +235,7 @@ ul.arrow-list {
           drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
         .card-header {
           display: block;
-          animation: letterSpacing 750ms linear forwards;
+          letter-spacing: 0.15rem;
         }
         .progress-div {
           color: var(--text-tertiary);
