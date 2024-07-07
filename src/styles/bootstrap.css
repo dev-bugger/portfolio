@@ -1,5 +1,7 @@
 :root {
   --bs-border-width: 0.0625rem;
+  --bs-body-color: var(--text-body);
+  --bs-body-bg: var(--app-background)
 }
 .navbar {
   --bs-navbar-toggler-icon-bg: url("../assets/three-dots-vertical.svg");
@@ -33,6 +35,8 @@
   --bs-card-border-width: var(--bs-border-width);
   --bs-card-title-color: var(--text-white);
   --bs-card-color: var(--text-body);
+  --bs-card-bg: var(--card-bg);
+  --bs-card-border-color: var(--text-highlight);
 }
 
 .badge {
@@ -63,4 +67,13 @@
   --bs-navbar-toggler-border-color: var(--text-highlight);
   --bs-navbar-toggler-border-radius: 0.5rem;
   border: none;
+}
+
+.progress {
+  --bs-progress-bg: var(--text-highlight-tint);
+  height: 0.45rem;
+}
+
+.progress-bar {
+  --bs-progress-bar-bg: var(--text-highlight);
 }

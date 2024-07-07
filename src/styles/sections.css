@@ -72,9 +72,6 @@ main {
 }
 
 @media ((max-width: 768px)) {
-  #home {
-    padding: 10% 0;
-  }
   .view {
     & > section {
       flex-direction: column-reverse;

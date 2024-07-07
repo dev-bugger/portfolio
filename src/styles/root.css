@@ -20,7 +20,6 @@
   --font-family-heading: "Paytone One", sans-serif;
   --font-family-body: "Poppins", sans-serif;
   --font-family-sub-heading: "Rajdhani", sans-serif;
-  --font-family-caption: "Shadows Into Light", cursive;
 
   --text-body: var(--text-primary);
   --app-background: linear-gradient(
@@ -28,15 +27,25 @@
     var(--bg-primary),
     var(--bg-primary-light)
   );
+
+  --card-bg: transparent;
+  --card-bg-hover-color: rgba(30, 41, 59, 0.5);
+
+  --transition-duration: 0.5s;
+  --transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0rem;
+  height: 0rem;
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--text-secondary);
   border-radius: var(--bs-border-radius);
+}
+
+* {
+  transition: all var(--transition-duration) var(--transition-timing-function);
 }
 
 html {

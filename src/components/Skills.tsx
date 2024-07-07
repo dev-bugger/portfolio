@@ -1,4 +1,12 @@
-import { Card, Col, Row } from "react-bootstrap";
+import {
+  Card,
+  Col,
+  Container,
+  Image,
+  ProgressBar,
+  Row,
+  Stack,
+} from "react-bootstrap";
 
 import { skillList } from "utils/config";
 
@@ -6,27 +14,36 @@ const Skills = () => {
   return (
     <section id="skills">
       <h3 className="numbered-list">Skills & Superpowers</h3>
-      <Row className="justify-content-center">
-        {skillList.map(({ Icon, label, skills }) => (
-          <Col xs={12} sm={6} md={6} lg={4} xl={3} key={label}>
-            <Card className="mb-4">
-              <Card.Body className="align-items-center justify-content-center d-flex flex-column">
-                <div className="card-front">
-                  <Icon className="logo mb-2" />
-                  <Card.Title className="mb-0 text-muted">{label}</Card.Title>
-                </div>
-                <div className="card-back">
-                  <ul className="arrow-list">
-                    {skills.map((skill) => (
-                      <li>{skill.label}</li>
-                    ))}
-                  </ul>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
+
+      <Container as="ul" className="arrow-list">
+        {skillList.map(({ Icon, ...group }) => (
+          <Row className="card-container">
+            <Col xs={12} sm={12} md={4} lg={4}>
+              <li>
+                <Icon />
+                {group.label}
+              </li>
+            </Col>
+            <Col xs={12} sm={12} md={8} lg={8}>
+              <Card body>
+                <Stack gap={1} as={Container}>
+                  {group.skills.map((skill) => (
+                    <Row className="progress-div">
+                      <Col xs={12} sm={4} md={4} lg={4}>
+                        <Image src={skill.icon} roundedCircle />
+                        {skill.label}
+                      </Col>
+                      <Col xs={12} sm={8} md={8} lg={8}>
+                        <ProgressBar now={skill.percent} />
+                      </Col>
+                    </Row>
+                  ))}
+                </Stack>
+              </Card>
+            </Col>
+          </Row>
         ))}
-      </Row>
+      </Container>
     </section>
   );
 };

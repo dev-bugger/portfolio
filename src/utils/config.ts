@@ -169,22 +169,27 @@ export const skillList: TSkillList = [
       {
         label: "HTML",
         icon: "https://www.clipartkey.com/mpngs/m/210-2104705_html-logo-png-transparent-background.png",
+        percent: 90,
       },
       {
         label: "CSS",
         icon: "https://p1.hiclipart.com/preview/980/312/965/html-logo-css3-javascript-web-design-css-grid-layout-html5-electric-blue-symbol-png-clipart-thumbnail.jpg",
+        percent: 90,
       },
       {
         label: "JavaScript",
         icon: "https://th.bing.com/th/id/R.e6d82362f50c26c1b0e6186b99e18e3c?rik=ZkiNhqWudt2EYQ&riu=http%3a%2f%2f3.bp.blogspot.com%2f-PTty3CfTGnA%2fTpZOEjTQ_WI%2fAAAAAAAAAeo%2fKeKt_D5X2xo%2fs1600%2fjs.jpg&ehk=uLz7cG48BbXqyb7LS1GN3v3uFyOhkFlskPBBnFx4ryc%3d&risl=&pid=ImgRaw&r=0",
+        percent: 95,
       },
       {
         label: "TypeScript",
         icon: "https://cdn-icons-png.flaticon.com/512/5968/5968381.png",
+        percent: 95,
       },
       {
         label: "Java",
         icon: "https://softsuave-assets.s3.amazonaws.com/images/2020/android/java-logo.png",
+        percent: 70,
       },
     ],
   },
@@ -195,30 +200,37 @@ export const skillList: TSkillList = [
       {
         label: "ReactJS",
         icon: "https://th.bing.com/th/id/R.f81a6f373c244b1f70f4b7402b5ab372?rik=rbXh4ieLuKt%2bmA&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f09%2fReact_logo_logotype_emblem.png&ehk=QhGOkKcUKCU7FBQgHOajOiJqJBACUTD2Ni6LsfqzCEA%3d&risl=&pid=ImgRaw&r=0",
+        percent: 95,
       },
       {
         label: "AngularJS",
         icon: "https://icon2.cleanpng.com/20190715/koz/kisspng-angularjs-scalable-vector-graphics-portable-networ-voice-broadcasting-dataoxy-technologies-5d2d16295f9384.6540886915632358813915.jpg",
+        percent: 70,
       },
       {
         label: "Redux",
         icon: "https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png",
+        percent: 95,
       },
       {
         label: "Redux Saga",
         icon: "https://w7.pngwing.com/pngs/375/686/png-transparent-redux-saga-hd-logo.png",
+        percent: 90,
       },
       {
         label: "Spring Boot",
         icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Ylz7W_BiLQErAS8pGHwNeup8vgwXVI2gag&s",
+        percent: 65,
       },
       {
         label: "Express",
         icon: "https://expressjs.com/images/express-facebook-share.png",
+        percent: 75,
       },
       {
         label: "Node.js",
         icon: "https://banner2.cleanpng.com/20180425/jrw/kisspng-node-js-javascript-web-application-express-js-comp-5ae0f84e2a4242.1423638015246930701731.jpg",
+        percent: 80,
       },
     ],
   },
@@ -229,10 +241,12 @@ export const skillList: TSkillList = [
       {
         label: "MySQL",
         icon: "https://p7.hiclipart.com/preview/747/798/387/mysql-database-web-development-computer-software-dolphin.jpg",
+        percent: 70,
       },
       {
         label: "MongoDB",
         icon: "https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png",
+        percent: 50,
       },
     ],
   },
@@ -243,10 +257,12 @@ export const skillList: TSkillList = [
       {
         label: "Webpack",
         icon: "https://w1.pngwing.com/pngs/518/449/png-transparent-react-logo-webpack-babel-javascript-npm-github-nodejs-front-and-back-ends-thumbnail.png",
+        percent: 80,
       },
       {
         label: "Git",
         icon: "https://w7.pngwing.com/pngs/646/324/png-transparent-github-computer-icons-github-logo-monochrome-head-thumbnail.png",
+        percent: 85,
       },
     ],
   },

@@ -28,6 +28,7 @@ export interface TSchoolList extends Array<TSchoolListItem> {}
 interface TSkill {
   label: string;
   icon: string;
+  percent: number;
 }
 
 interface TSkillListItem {
