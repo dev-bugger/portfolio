@@ -1,19 +1,20 @@
+interface TCompany {
+  label: string;
+  href: string;
+}
+
+export interface TCompanyRecord extends Record<string, TCompany> {}
+
 interface TJob {
   title: string;
-  company: string;
+  company: TCompany;
   duration: string;
   description: Array<string>;
   location: string;
   skills: string[];
 }
 
-interface TJobListItem {
-  label: string;
-  designations: Array<TJob>;
-  href: string;
-}
-
-export interface TJobList extends Array<TJobListItem> {}
+export interface TJobList extends Array<TJob> {}
 
 interface TSchoolListItem {
   label: string;

@@ -5,161 +5,142 @@ import { ReactComponent as ToolsIcon } from "assets/tools.svg";
 import { ReactComponent as DatabaseIcon } from "assets/database.svg";
 import { ReactComponent as CodeIcon } from "assets/code.svg";
 import { ReactComponent as ComputerIcon } from "assets/computer.svg";
-import { TJobList, TSkillList } from "types/config.types";
+import { TCompanyRecord, TJobList, TSkillList } from "types/config.types";
 
-const companyList: TJobList = [
-  {
+const companies: TCompanyRecord = {
+  visa: {
     label: "Visa Inc.",
     href: "https://www.visa.co.in/",
-    designations: [
-      {
-        company: "Visa",
-        title: "Senior Software Engineer",
-        duration: "Oct 2023 - Present",
-        location: "Bengaluru, Karnataka, India",
-        description: [
-          "Building robust and responsive user interfaces using Angular & React.",
-          "Implementing RESTful APIs for seamless communication between frontend and backend systems.",
-          "Collaborating closely with cross-functional teams to deliver innovative solutions that meet user requirements and business objectives.",
-        ],
-        skills: [
-          "AngularJS",
-          "ReactJS",
-          "HTML & CSS",
-          "Typescript",
-          "Javascript",
-          "Java",
-          "Springboot",
-          "Microservices",
-          "Bitbucket",
-          "Git",
-        ],
-      },
-    ],
   },
-  {
-    label: "HighRadius Technologies",
+  hrc: {
+    label: "HighRadius",
     href: "https://highradius.com/",
-    designations: [
-      {
-        title: "Software Engineer - I",
-        company: "HighRadius",
-        duration: "Jan 2023 - Oct 2023 \u2022 10 mos",
-        location: "Hyderabad, Telangana, India",
-        description: [
-          'Developed "LiveCube", a no-code platform tailored for the office of the CFO, extending standard functionality with an intuitive Excel-like spreadsheet interface usable across Enterprise Applications.',
-          "Successfully delivered multiple complex use cases for the platform, improving overall performance by 30% through optimization initiatives.",
-          "Provided mentorship to junior developers, overseeing their user story development and ensuring adherence to best practices and project timelines.",
-        ],
-        skills: [
-          "ReactJS",
-          "HTML & CSS",
-          "Typescript",
-          "Webpack",
-          "Git",
-          "Gitlab",
-        ],
-      },
-      {
-        title: "Associate Software Engineer - II",
-        company: "HighRadius",
-        duration: "July 2022 - January 2023 \u2022 7 mos",
-        location: "Bhubaneswar, Odisha, India",
-        description: [
-          "Planned and executed the creation of a design system and a modular and reusable ReactJS component library for the CFOTech application suite.",
-          "Improved the stability and performance and delivered several use cases for APaaS, a Low Code/No Code platform.",
-          "Collaborated with multiple stakeholders to plan and deliver several use cases for the application suite.",
-          "Mentored several junior developers, did code reviews, and supervised the development process for several user stories.",
-        ],
-        skills: ["ReactJS", "HTML & CSS", "Typescript", "Git", "Gitlab"],
-      },
-      {
-        title: "Associate Software Engineer - I",
-        company: "HighRadius",
-        duration: "June 2021 - July 2022 \u2022 1 yr",
-        location: "Bhubaneswar, Odisha, India",
-        description: [
-          "Managed and mentored a team of 9 interns to ensure high-quality delivery of product features.",
-          "Analyzed requirements, proposed technical designs, and supervised the development and testing processes for various user stories.",
-          "Led the initial planning and creation of APaaS, a Low Code/No Code platform enabling dynamic UI rendering through configuration-based solutions.",
-          "Developed UI applications for the company's CFOTech initiative using Spring Boot, Hibernate, Java, ReactJS, Redux, TypeScript, and MySQL, contributing to technological advancement and market competitiveness.",
-        ],
-        skills: [
-          "ReactJS",
-          "Typescript",
-          "Java",
-          "Javascript",
-          "Springboot",
-          "Git",
-          "Gitlab",
-        ],
-      },
-      {
-        title: "Software Engineer Intern",
-        company: "HighRadius",
-        duration: "July 2020 - June 2021 \u2022 1 yr",
-        location: "Bhubaneswar, Odisha, India",
-        description: [
-          "Worked with Autonomous team on live projects.",
-          "Spearheaded the development of innovative features using JavaScript, ReactJS, Redux, and Material UI to enhance application functionality.",
-          "Proactively tackled and resolved critical bugs and defects, ensuring seamless user experience.",
-          "Implemented the transformative Trifecta design system, elevating visual aesthetics and usability across the application.",
-        ],
-        skills: ["ReactJS", "Javascript", "Redux", "Redux Saga", "Git"],
-      },
-      {
-        title: "Summer Intern",
-        company: "HighRadius",
-        duration: "April - June 2020 \u2022 3 mos",
-        location: "Bhubaneswar, Odisha, India",
-        description: [
-          "Developed an AI-Enabled FinTech B2B Invoice Management Application that empowers AR analysts to efficiently monitor and manage payments in the dynamic B2B environment.",
-          "Designed intuitive UI with ReactJS and Material-UI for seamless user experience.",
-          "Built backend infrastructure with JSP and MySQL database for robust data handling.",
-          "Implemented machine learning models in Python to predict partial payments accurately.",
-          "Developed a ChatBot using DialogFlow to enhance customer interaction and support within the application.",
-        ],
-        skills: [
-          "ReactJS",
-          "Javascript",
-          "Java",
-          "JSP",
-          "MySQL",
-          "Python",
-          "ML & AI",
-          "Dialogflow",
-        ],
-      },
+  },
+  hcl: {
+    label: "HCL",
+    href: "https://www.hcltech.com/",
+  },
+};
+
+export const jobList: TJobList = [
+  {
+    company: companies.visa,
+    title: "Senior Software Engineer",
+    duration: "Oct 2023 - Present",
+    location: "Bengaluru, Karnataka, India",
+    description: [
+      "Building robust and responsive user interfaces using Angular & React.",
+      "Implementing RESTful APIs for seamless communication between frontend and backend systems.",
+      "Collaborating closely with cross-functional teams to deliver innovative solutions that meet user requirements and business objectives.",
+    ],
+    skills: [
+      "AngularJS",
+      "ReactJS",
+      "HTML & CSS",
+      "Typescript",
+      "Javascript",
+      "Java",
+      "Springboot",
+      "Microservices",
+      "Bitbucket",
+      "Git",
     ],
   },
   {
-    label: "HCL Technologies",
-    href: "https://www.hcltech.com/",
-    designations: [
-      {
-        title: "Software Engineer Intern",
-        company: "HCL",
-        duration: "June - July 2019 \u2022 2 mos",
-        location: "Lucknow, Uttar Pradesh, India",
-        description: [
-          "Developed a Java AWT based Application using MySQL database and Java for backend.",
-          "The Event Hub application is a Event Management System for institutions to keep track of the various events happening in the campus.",
-          "Performed a key role in the development of backend of the application.",
-        ],
-        skills: ["Java", "Java AWT", "MySQL", "JSP"],
-      },
+    title: "Software Engineer - I",
+    company: companies.hrc,
+    duration: "Jan 2023 - Oct 2023 \u2022 10 mos",
+    location: "Hyderabad, Telangana, India",
+    description: [
+      'Developed "LiveCube", a no-code platform tailored for the office of the CFO, extending standard functionality with an intuitive Excel-like spreadsheet interface usable across Enterprise Applications.',
+      "Successfully delivered multiple complex use cases for the platform, improving overall performance by 30% through optimization initiatives.",
+      "Provided mentorship to junior developers, overseeing their user story development and ensuring adherence to best practices and project timelines.",
     ],
+    skills: ["ReactJS", "HTML & CSS", "Typescript", "Webpack", "Git", "Gitlab"],
+  },
+  {
+    title: "Associate Software Engineer - II",
+    company: companies.hrc,
+    duration: "July 2022 - January 2023 \u2022 7 mos",
+    location: "Bhubaneswar, Odisha, India",
+    description: [
+      "Planned and executed the creation of a design system and a modular and reusable ReactJS component library for the CFOTech application suite.",
+      "Improved the stability and performance and delivered several use cases for APaaS, a Low Code/No Code platform.",
+      "Collaborated with multiple stakeholders to plan and deliver several use cases for the application suite.",
+      "Mentored several junior developers, did code reviews, and supervised the development process for several user stories.",
+    ],
+    skills: ["ReactJS", "HTML & CSS", "Typescript", "Git", "Gitlab"],
+  },
+  {
+    title: "Associate Software Engineer - I",
+    company: companies.hrc,
+    duration: "June 2021 - July 2022 \u2022 1 yr",
+    location: "Bhubaneswar, Odisha, India",
+    description: [
+      "Managed and mentored a team of 9 interns to ensure high-quality delivery of product features.",
+      "Analyzed requirements, proposed technical designs, and supervised the development and testing processes for various user stories.",
+      "Led the initial planning and creation of APaaS, a Low Code/No Code platform enabling dynamic UI rendering through configuration-based solutions.",
+      "Developed UI applications for the company's CFOTech initiative using Spring Boot, Hibernate, Java, ReactJS, Redux, TypeScript, and MySQL, contributing to technological advancement and market competitiveness.",
+    ],
+    skills: [
+      "ReactJS",
+      "Typescript",
+      "Java",
+      "Javascript",
+      "Springboot",
+      "Git",
+      "Gitlab",
+    ],
+  },
+  {
+    title: "Software Engineer Intern",
+    company: companies.hrc,
+    duration: "July 2020 - June 2021 \u2022 1 yr",
+    location: "Bhubaneswar, Odisha, India",
+    description: [
+      "Worked with Autonomous team on live projects.",
+      "Spearheaded the development of innovative features using JavaScript, ReactJS, Redux, and Material UI to enhance application functionality.",
+      "Proactively tackled and resolved critical bugs and defects, ensuring seamless user experience.",
+      "Implemented the transformative Trifecta design system, elevating visual aesthetics and usability across the application.",
+    ],
+    skills: ["ReactJS", "Javascript", "Redux", "Redux Saga", "Git"],
+  },
+  {
+    title: "Summer Intern",
+    company: companies.hrc,
+    duration: "April - June 2020 \u2022 3 mos",
+    location: "Bhubaneswar, Odisha, India",
+    description: [
+      "Developed an AI-Enabled FinTech B2B Invoice Management Application that empowers AR analysts to efficiently monitor and manage payments in the dynamic B2B environment.",
+      "Designed intuitive UI with ReactJS and Material-UI for seamless user experience.",
+      "Built backend infrastructure with JSP and MySQL database for robust data handling.",
+      "Implemented machine learning models in Python to predict partial payments accurately.",
+      "Developed a ChatBot using DialogFlow to enhance customer interaction and support within the application.",
+    ],
+    skills: [
+      "ReactJS",
+      "Javascript",
+      "Java",
+      "JSP",
+      "MySQL",
+      "Python",
+      "ML & AI",
+      "Dialogflow",
+    ],
+  },
+  {
+    title: "Software Engineer Intern",
+    company: companies.hcl,
+    duration: "June - July 2019 \u2022 2 mos",
+    location: "Lucknow, Uttar Pradesh, India",
+    description: [
+      "Developed a Java AWT based Application using MySQL database and Java for backend.",
+      "The Event Hub application is a Event Management System for institutions to keep track of the various events happening in the campus.",
+      "Performed a key role in the development of backend of the application.",
+    ],
+    skills: ["Java", "Java AWT", "MySQL", "JSP"],
   },
 ];
-
-export const jobList = companyList
-  .map((comp) =>
-    comp.designations.map((job) => ({
-      ...job,
-      href: comp.href,
-    }))
-  )
-  .flat();
 
 export const skillList: TSkillList = [
   {

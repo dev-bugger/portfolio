@@ -26,10 +26,10 @@ const Experience = () => {
               {jobNum.title}&nbsp;
               <Card.Link
                 className="fc-green"
-                href={jobNum.href}
+                href={jobNum.company.href}
                 target="_blank"
               >
-                @{jobNum.company}
+                @{jobNum.company.label}
                 <LinkIcon />
               </Card.Link>
               <h6>{jobNum.duration}</h6>

@@ -26,7 +26,7 @@ const Skills = () => {
             </Col>
             <Col xs={12} sm={12} md={8} lg={8}>
               <Card body>
-                <Stack gap={1} as={Container}>
+                <Stack gap={4} as={Container}>
                   {group.skills.map((skill) => (
                     <Row className="progress-div">
                       <Col xs={12} sm={4} md={4} lg={4}>

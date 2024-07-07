@@ -138,11 +138,17 @@ ul.arrow-list {
 }
 
 #skills {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
   .card-container {
     > :first-child {
       margin-bottom: 0.5rem;
     }
     .card {
+      height: fit-content;
       flex-direction: row;
       color: var(--text-white);
       --bs-card-border-color: transparent;
@@ -154,7 +160,7 @@ ul.arrow-list {
     .progress-div {
       align-items: center;
       > :first-child {
-        padding-block: 0.25rem;
+        padding-block-end: 0.5rem;
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -169,43 +175,28 @@ ul.arrow-list {
       gap: 0.5rem;
       align-items: center;
     }
-    @media (min-width: 768px) {
-      &:hover {
-        li {
-          color: var(--text-highlight);
-          animation: letterSpacing 750ms linear forwards;
-        }
-        .progress-div {
-          color: var(--text-tertiary);
-
-          > :first-child {
-            padding-block: 0.5rem;
-          }
-          img {
-            width: 1.25rem;
-            height: 1.25rem;
-            display: block;
-          }
-        }
-        .progress-bar {
-          --bs-progress-bar-bg: var(--text-highlight);
-          transition: all 1s;
-        }
-        .card {
-          --bs-card-bg: var(--card-bg-hover-color);
-          --bs-card-border-color: var(--text-highlight-tint);
-          filter: drop-shadow(0 0.875rem 0.5rem rgba(0, 0, 0, 0.04))
-            drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
+    @media (max-width: 768px) {
+      li {
+        color: var(--text-highlight);
+      }
+      .progress-div {
+        color: var(--text-tertiary);
+        img {
+          width: 1.25rem;
+          height: 1.25rem;
+          display: block;
         }
       }
     }
-    @media (max-width: 768px) {
+
+    &:hover {
       li {
         color: var(--text-highlight);
         animation: letterSpacing 750ms linear forwards;
       }
       .progress-div {
         color: var(--text-tertiary);
+
         > :first-child {
           padding-block: 0.5rem;
         }
@@ -226,12 +217,6 @@ ul.arrow-list {
           drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
       }
     }
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
   }
 }
 
@@ -330,22 +315,5 @@ ul.arrow-list {
   }
   @media (min-width: 768px) {
     padding-inline: 25%;
-  }
-}
-
-#skills {
-  justify-content: flex-start;
-  .card {
-    height: fit-content;
-    .card-body {
-      gap: 1rem;
-      ul {
-        li {
-          display: flex;
-          gap: 0.5rem;
-          align-items: center;
-        }
-      }
-    }
   }
 }
