@@ -18,7 +18,7 @@ module.exports = (env) => ({
   output: {
     filename: "bundle.js", // Output bundle file name
     path: path.resolve(__dirname, "build"), // Output directory,
-    publicPath: "/portfolio/",
+    publicPath: "/portfolio",
   },
   module: {
     rules: [
@@ -80,6 +80,7 @@ module.exports = (env) => ({
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      favicon: "./public/favicon.ico",
     }),
     new CopyPlugin({
       patterns: [{ from: "./public/404.html", to: "./404.html" }],

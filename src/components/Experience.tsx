@@ -43,7 +43,7 @@ const Experience = () => {
               </ul>
               <div className="badge-list">
                 {jobNum.skills.map((skill) => (
-                  <Badge>{skill}</Badge>
+                  <Badge key="skill">{skill}</Badge>
                 ))}
               </div>
             </Card.Body>
