@@ -145,62 +145,96 @@ ul.arrow-list {
   .container {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.25rem;
   }
-  .card-container {
-    > :first-child {
-      padding-block: 1rem;
-    }
-    .card {
-      height: fit-content;
-      flex-direction: row;
-      color: var(--text-white);
-      --bs-card-border-color: transparent;
-    }
-    .progress-bar {
-      --bs-progress-bar-bg: var(--text-primary);
-      animation: pulse 2s infinite;
-    }
-    .progress-div {
-      align-items: center;
-      > :first-child {
-        padding-block-end: 0.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-      img {
-        width: 1.25rem;
-        height: 1.25rem;
-      }
-    }
-    li {
-      color: var(--text-highlight);
+  .card {
+    .card-title {
       display: inline-flex;
       gap: 0.5rem;
       align-items: center;
     }
-
-    &:hover {
-      li {
-        animation: letterSpacing 750ms linear forwards;
+  }
+  .group-container {
+    &.row > * {
+      --bs-gutter-y: 1rem;
+    }
+    .card {
+      --bs-card-bg: var(--card-bg-hover-color);
+      --bs-card-border-color: var(--text-highlight-tint);
+      filter: drop-shadow(0 0.875rem 0.5rem rgba(0, 0, 0, 0.04))
+        drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      height: 12rem;
+      min-height: fit-content;
+      .card-body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
       }
-      .progress-div {
-        color: var(--text-tertiary);
+      .card-title {
+        color: var(--text-secondary);
+      }
+      svg {
+        font-size: 4rem;
+      }
 
-        > :first-child {
-          padding-block: 0.5rem;
+      &:hover {
+        box-shadow: 0.25rem 0.25rem 0.625rem var(--text-highlight-tint);
+        transform: translateY(-0.25rem);
+        .card-title {
+          color: var(--text-highlight);
         }
       }
-      .progress-bar {
-        --bs-progress-bar-bg: var(--text-highlight);
-        transition: all 1s;
+    }
+  }
+  .skill-container {
+    .card {
+      color: var(--text-white);
+      --bs-card-border-color: transparent;
+      height: fit-content;
+      .card-title {
+        margin: 0;
+        color: var(--text-highlight);
       }
-      .card {
+      .progress-bar {
+        --bs-progress-bar-bg: var(--text-primary);
+        animation: pulse 2s infinite;
+      }
+      .progress-div {
+        align-items: center;
+        > :first-child {
+          padding-block-end: 0.5rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        img {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+      &:hover {
         --bs-card-bg: var(--card-bg-hover-color);
         --bs-card-border-color: var(--text-highlight-tint);
         filter: drop-shadow(0 0.875rem 0.5rem rgba(0, 0, 0, 0.04))
           drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
+        .card-header {
+          display: block;
+          animation: letterSpacing 750ms linear forwards;
+        }
+        .progress-div {
+          color: var(--text-tertiary);
+
+          > :first-child {
+            padding-block: 0.5rem;
+          }
+        }
+        .progress-bar {
+          --bs-progress-bar-bg: var(--text-highlight);
+          transition: all 1s;
+        }
       }
     }
   }

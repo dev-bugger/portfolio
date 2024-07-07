@@ -7,6 +7,9 @@ import { ReactComponent as LinkedInIcon } from "assets/linkedIn.svg";
 import { ReactComponent as MailIcon } from "assets/email.svg";
 import { ReactComponent as ToolsIcon } from "assets/tools.svg";
 import { TCompanyRecord, TJobList, TSkillList } from "types/config.types";
+import { ReactComponent as WebDevIcon } from "assets/web-dev.svg";
+import { ReactComponent as FrontendIcon } from "assets/frontend.svg";
+import { ReactComponent as BackendIcon } from "assets/backend.svg";
 
 const companies: TCompanyRecord = {
   visa: {
@@ -247,6 +250,21 @@ export const skillList: TSkillList = [
         percent: 85,
       },
     ],
+  },
+];
+
+export const serviceList = [
+  {
+    label: "Web Development",
+    Icon: WebDevIcon,
+  },
+  {
+    label: "Frontend Development",
+    Icon: FrontendIcon,
+  },
+  {
+    label: "Backend Development",
+    Icon: BackendIcon,
   },
 ];
 
