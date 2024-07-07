@@ -20,6 +20,10 @@ ul.arrow-list {
   .navbar-collapse {
     padding: 0;
   }
+  .header-list {
+    column-gap: 0.25rem;
+    row-gap: 0.5rem;
+  }
   .header-list > .nav-item {
     display: flex;
     justify-content: flex-end;
@@ -145,7 +149,7 @@ ul.arrow-list {
   }
   .card-container {
     > :first-child {
-      margin-bottom: 0.5rem;
+      padding-block: 1rem;
     }
     .card {
       height: fit-content;
@@ -166,32 +170,19 @@ ul.arrow-list {
         gap: 0.5rem;
       }
       img {
-        display: none;
+        width: 1.25rem;
+        height: 1.25rem;
       }
     }
     li {
-      color: var(--text-secondary);
+      color: var(--text-highlight);
       display: inline-flex;
       gap: 0.5rem;
       align-items: center;
     }
-    @media (max-width: 768px) {
-      li {
-        color: var(--text-highlight);
-      }
-      .progress-div {
-        color: var(--text-tertiary);
-        img {
-          width: 1.25rem;
-          height: 1.25rem;
-          display: block;
-        }
-      }
-    }
 
     &:hover {
       li {
-        color: var(--text-highlight);
         animation: letterSpacing 750ms linear forwards;
       }
       .progress-div {
@@ -199,11 +190,6 @@ ul.arrow-list {
 
         > :first-child {
           padding-block: 0.5rem;
-        }
-        img {
-          width: 1.25rem;
-          height: 1.25rem;
-          display: block;
         }
       }
       .progress-bar {

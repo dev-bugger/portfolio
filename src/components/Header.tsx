@@ -42,12 +42,7 @@ const Header = () => {
               </Nav.Item>
             ))}
             <Nav.Item>
-              <Button
-                variant="outline-primary"
-                href={resume}
-                target="_blank"
-                className="ms-2"
-              >
+              <Button variant="outline-primary" href={resume} target="_blank">
                 Resume
               </Button>
             </Nav.Item>
