@@ -18,7 +18,7 @@ module.exports = (env) => ({
   output: {
     filename: "bundle.js", // Output bundle file name
     path: path.resolve(__dirname, "build"), // Output directory,
-    publicPath: "/portfolio",
+    publicPath: "/portfolio/",
   },
   module: {
     rules: [
