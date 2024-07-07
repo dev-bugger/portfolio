@@ -1,10 +1,11 @@
+import { ReactComponent as CodeIcon } from "assets/code.svg";
+import { ReactComponent as ComputerIcon } from "assets/computer.svg";
+import { ReactComponent as DatabaseIcon } from "assets/database.svg";
 import { ReactComponent as GitHubIcon } from "assets/github.svg";
 import { ReactComponent as InstagramIcon } from "assets/instagram.svg";
 import { ReactComponent as LinkedInIcon } from "assets/linkedIn.svg";
+import { ReactComponent as MailIcon } from "assets/email.svg";
 import { ReactComponent as ToolsIcon } from "assets/tools.svg";
-import { ReactComponent as DatabaseIcon } from "assets/database.svg";
-import { ReactComponent as CodeIcon } from "assets/code.svg";
-import { ReactComponent as ComputerIcon } from "assets/computer.svg";
 import { TCompanyRecord, TJobList, TSkillList } from "types/config.types";
 
 const companies: TCompanyRecord = {
@@ -283,5 +284,10 @@ export const socialsList = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/anjali-rawat24/",
     Icon: LinkedInIcon,
+  },
+  {
+    label: "Mail",
+    href: "mailto:anjalirawat.dev@gmail.com",
+    Icon: MailIcon,
   },
 ];

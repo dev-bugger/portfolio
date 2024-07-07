@@ -263,6 +263,12 @@ ul.arrow-list {
     flex-direction: column;
     justify-content: flex-end;
     font-size: 1.5rem;
+    .nav-link {
+      &:hover {
+        --bs-nav-link-hover-color: var(--text-highlight);
+        transform: translateY(-0.15rem);
+      }
+    }
     &::after {
       content: "";
       display: block;
@@ -272,7 +278,6 @@ ul.arrow-list {
       background-color: var(--text-primary);
     }
   }
-
   @media ((max-width: 768px)) {
     &.socials-nav {
       flex-direction: row;
@@ -291,6 +296,11 @@ ul.arrow-list {
         flex: 1;
         background-color: var(--text-primary);
       }
+    }
+  }
+  &.email-nav {
+    a {
+      writing-mode: vertical-rl;
     }
   }
 }
