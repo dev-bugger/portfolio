@@ -1,4 +1,5 @@
 import profilePhoto from "assets/me.jpeg";
+import withLayout from "HOC/withLayout";
 import { Col, Image, Row } from "react-bootstrap";
 
 const Intro = () => {
@@ -28,4 +29,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default withLayout(Intro);

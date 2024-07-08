@@ -1,27 +1,26 @@
-import withLayout from "HOC/withLayout";
-import { AboutMe, Contact, Experience, Intro, Skills } from "components";
 import { Navigate, RouteObject } from "react-router-dom";
+import { resolveLazy } from "utils/common";
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    Component: withLayout(Intro),
+    lazy: () => resolveLazy(import("components/Intro")),
   },
   {
     path: "about",
-    Component: withLayout(AboutMe),
+    lazy: () => resolveLazy(import("components/AboutMe")),
   },
   {
     path: "experience",
-    Component: withLayout(Experience),
+    lazy: () => resolveLazy(import("components/Experience")),
   },
   {
     path: "skills",
-    Component: withLayout(Skills),
+    lazy: () => resolveLazy(import("components/Skills")),
   },
   {
     path: "contact",
-    Component: withLayout(Contact),
+    lazy: () => resolveLazy(import("components/Contact")),
   },
   {
     path: "*",

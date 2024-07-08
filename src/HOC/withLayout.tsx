@@ -1,5 +1,7 @@
-import { Header, Socials } from "components";
 import { ComponentType } from "react";
+
+import Header from "components/Header";
+import Socials from "components/Socials";
 
 const withLayout = <P extends object>(
   WrappedComponent: ComponentType<P>

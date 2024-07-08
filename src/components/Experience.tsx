@@ -2,6 +2,7 @@ import { Badge, Card, Col, Container, Row, Stack } from "react-bootstrap";
 
 import { ReactComponent as LinkIcon } from "assets/link.svg";
 import { ReactComponent as WorkIcon } from "assets/work.svg";
+import withLayout from "HOC/withLayout";
 import { jobList } from "utils/config";
 
 const Experience = () => {
@@ -43,7 +44,7 @@ const Experience = () => {
               </ul>
               <div className="badge-list">
                 {jobNum.skills.map((skill) => (
-                  <Badge key="skill">{skill}</Badge>
+                  <Badge key={skill}>{skill}</Badge>
                 ))}
               </div>
             </Card.Body>
@@ -54,4 +55,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default withLayout(Experience);

@@ -1,3 +1,4 @@
+import withLayout from "HOC/withLayout";
 import {
   Card,
   Col,
@@ -62,4 +63,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default withLayout(Skills);

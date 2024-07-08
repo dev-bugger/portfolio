@@ -1,3 +1,5 @@
+import { ModuleType } from "types/common.types";
+
 export const calculateExperience = () => {
   const currentDate = new Date();
   const dateStarted = new Date("2020/07/01");
@@ -15,3 +17,10 @@ export const isRouteActive = (
   path: string,
   currentActivePath: string
 ): boolean => currentActivePath === path;
+
+export const resolveLazy = async <T>(
+  importFunction: Promise<ModuleType<T>>
+) => {
+  const module = await importFunction;
+  return { Component: module.default };
+};
