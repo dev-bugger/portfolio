@@ -77,3 +77,7 @@
 .progress-bar {
   --bs-progress-bar-bg: var(--text-highlight);
 }
+
+.offcanvas {
+  --bs-offcanvas-border-color: transparent;
+}

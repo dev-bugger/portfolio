@@ -15,40 +15,66 @@ ul.arrow-list {
   }
 }
 
-#header {
-  border-bottom: 0.0625rem solid var(--text-highlight-tint);
-  .navbar-collapse {
-    padding: 0;
-  }
-  .header-list {
-    column-gap: 0.25rem;
-    row-gap: 0.5rem;
-  }
-  .header-list > .nav-item {
-    display: flex;
+.nav-drawer {
+  .offcanvas-body {
     justify-content: flex-end;
-    align-items: center;
-    &.active {
-      background-color: var(--text-highlight-tint);
-      border: 0.0625rem dashed var(--text-highlight-tint);
-      font-weight: bold;
-    }
   }
-  @media (max-width: 767px) {
-    .navbar-collapse {
-      padding-bottom: 1rem;
-    }
-    .header-list > .nav-item {
+  .nav-list {
+    gap: 0.5rem;
+    & > .nav-item {
       &.active {
-        background-color: transparent;
-        border: none;
-        border-right: 0.25rem solid var(--text-highlight);
+        background-color: var(--text-highlight-tint);
+        border: 0.0625rem dashed var(--text-highlight-tint);
         font-weight: bold;
-        border-radius: 0.0625rem;
-        padding-right: 0.5rem;
+      }
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }
+  @media (max-width: 768px) {
+    --bs-offcanvas-width: fit-content;
+    --bs-offcanvas-transition: none;
+    /* --bs-offcanvas-bg: */
+
+    min-width: fit-content;
+    height: fit-content;
+
+    &.offcanvas {
+      &.show:not(.hiding) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .offcanvas-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    .nav-list {
+      & > .nav-item {
+        &.active {
+          background-color: transparent;
+          border: none;
+          border-radius: 0.0625rem;
+          padding-right: 0.5rem;
+          .nav-link {
+            font-weight: bold;
+            color: var(--text-highlight);
+          }
+        }
+        &:hover {
+          transform: scale(1.25);
+        }
+      }
+    }
+  }
+}
+
+#header {
+  border-bottom: 0.0625rem solid var(--text-highlight-tint);
 }
 
 #home {
@@ -194,8 +220,8 @@ ul.arrow-list {
       }
 
       &:hover {
-        box-shadow: 0.25rem 0.25rem 0.625rem var(--text-highlight-tint);
-        transform: translateY(-0.25rem);
+        --bs-card-border-width: 0.125rem;
+        transform: scale(1.05);
         .card-title {
           color: var(--text-highlight);
         }
