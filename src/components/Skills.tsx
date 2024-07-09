@@ -30,7 +30,7 @@ const Skills = () => {
             </Row>
           </Col>
           {skillList.map(({ Icon, ...group }) => (
-            <Col xs={12} className="skill-container">
+            <Col xs={12} className="skill-container" key={group.label}>
               <Card>
                 <Card.Header>
                   <Card.Title as="span">
@@ -41,7 +41,7 @@ const Skills = () => {
                 <Card.Body>
                   <Stack gap={4} as={Container}>
                     {group.skills.map((skill) => (
-                      <Row className="progress-div">
+                      <Row className="progress-div" key={skill.label}>
                         <Col xs={12} sm={4} md={4} lg={4}>
                           <Image src={skill.icon} roundedCircle />
                           {skill.label}
