@@ -10,8 +10,6 @@
 }
 .nav-link {
   --bs-nav-link-color: var(--text-tertiary);
-}
-.nav-link:hover {
   --bs-nav-link-hover-color: var(--text-secondary);
 }
 
