@@ -1,5 +1,4 @@
 import { ReactComponent as ChatIcon } from "assets/chat.svg";
-import withLayout from "HOC/withLayout";
 import { Button } from "react-bootstrap";
 
 const Contact = () => {
@@ -25,4 +24,4 @@ const Contact = () => {
   );
 };
 
-export default withLayout(Contact);
+export default Contact;

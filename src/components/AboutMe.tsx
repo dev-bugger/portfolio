@@ -1,4 +1,3 @@
-import withLayout from "HOC/withLayout";
 import React from "react";
 import { NavLink } from "react-bootstrap";
 import { calculateExperience } from "utils/common";
@@ -49,4 +48,4 @@ const AboutMe = () => {
   );
 };
 
-export default withLayout(AboutMe);
+export default AboutMe;
