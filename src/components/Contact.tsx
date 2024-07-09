@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Button } from "react-bootstrap";
 
 import { ReactComponent as ChatIcon } from "assets/chat.svg";
@@ -27,4 +28,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);

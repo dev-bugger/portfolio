@@ -1,6 +1,7 @@
+import React, { memo } from "react";
+
 import Header from "components/Header";
 import Socials from "components/Socials";
-import React from "react";
 
 const View: React.FC<ViewProps> = ({ children }) => {
   return (
@@ -18,4 +19,4 @@ interface ViewProps {
   children: React.ReactNode;
 }
 
-export default View;
+export default memo(View);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import {
   Card,
   Col,
@@ -64,4 +65,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default memo(Skills);

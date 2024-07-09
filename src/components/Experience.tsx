@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Badge, Card, Col, Container, Row, Stack } from "react-bootstrap";
 
 import { ReactComponent as LinkIcon } from "assets/link.svg";
@@ -52,4 +53,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default memo(Experience);

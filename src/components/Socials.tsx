@@ -1,4 +1,5 @@
 import { Nav } from "react-bootstrap";
+import { memo } from "react";
 
 import { socialsList } from "utils/config";
 
@@ -16,4 +17,4 @@ const Socials = () => {
   );
 };
 
-export default Socials;
+export default memo(Socials);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 
@@ -61,4 +62,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

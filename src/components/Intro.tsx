@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Col, Image, Row } from "react-bootstrap";
 
 import profilePhoto from "assets/me.jpeg";
@@ -31,4 +32,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default memo(Intro);

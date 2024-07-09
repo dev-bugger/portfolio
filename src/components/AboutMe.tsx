@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { NavLink } from "react-bootstrap";
 import { calculateExperience } from "utils/common";
 
@@ -50,4 +50,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default memo(AboutMe);
