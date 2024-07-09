@@ -1,9 +1,12 @@
-import logo from "assets/logo.png";
-import resume from "assets/resume.pdf";
 import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+
+import logo from "assets/logo.png";
+import resume from "assets/resume.pdf";
 import { isRouteActive } from "utils/common";
 import { headerNavList } from "utils/config";
+
+import "styles/components/header.css";
 
 const Header = () => {
   const location = useLocation();

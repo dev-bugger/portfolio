@@ -1,5 +1,8 @@
-import profilePhoto from "assets/me.jpeg";
 import { Col, Image, Row } from "react-bootstrap";
+
+import profilePhoto from "assets/me.jpeg";
+
+import "styles/components/intro.css";
 
 const Intro = () => {
   return (

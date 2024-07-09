@@ -89,6 +89,77 @@ h6 {
   font-family: var(--font-family-sub-heading);
 }
 
-.fc-green {
+.highlight {
   color: var(--text-highlight);
+}
+
+.view {
+  > section {
+    flex-direction: row;
+  }
+}
+
+@media ((max-width: 768px)) {
+  .view {
+    > section {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+main {
+  overflow: auto;
+  > section {
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 10%;
+    padding-block: 2rem;
+  }
+}
+
+section {
+  animation: fadeIn ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.numbered-list {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  &::before {
+    color: var(--text-highlight);
+    font-family: var(--font-family-sub-heading);
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+  }
+  &::after {
+    content: "";
+    display: block;
+    flex-grow: 1;
+    height: 0.0625rem;
+    margin: auto 0;
+    margin-left: 1.25rem;
+    background-color: var(--bg-primary-lightest);
+  }
+}
+
+ul.arrow-list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  li {
+    list-style: none;
+    &:not(:last-child) {
+      padding-bottom: 0.75rem;
+    }
+    &::before {
+      content: "\00BB";
+      color: var(--text-highlight);
+      padding-right: 0.5rem;
+    }
+  }
 }

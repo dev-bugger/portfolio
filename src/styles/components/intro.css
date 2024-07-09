@@ -1,0 +1,89 @@
+#home {
+  .container {
+    align-items: center;
+  }
+  .image-wrapper {
+    position: relative;
+    animation: slideRightToLeft 1s ease-in forwards;
+    img {
+      width: 100%;
+      margin: auto;
+      border-radius: 50%;
+      box-shadow: 0.5rem 0.5rem 1rem rgba(100, 255, 219, 0.078),
+        -0.3rem -0.3rem 0.5rem rgba(100, 255, 219, 0.045);
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      filter: grayscale(1) contrast(1);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.25rem;
+      left: 0.5rem;
+      height: 100%;
+      width: 100%;
+      border: 0.0625rem solid var(--text-highlight);
+      z-index: -1;
+      border-radius: 50%;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    &:hover {
+      img {
+        filter: none;
+        transform: translate(-0.25rem, -0.25rem);
+      }
+      &::after {
+        transform: translate(0.25rem, 0.25rem);
+      }
+    }
+  }
+  h4 {
+    color: var(--text-highlight);
+    animation: slideDown 1s ease-in forwards;
+    animation-delay: 0ms;
+    font-family: var(--font-family-body);
+  }
+  h1 {
+    color: var(--text-white);
+    animation: slideUp 1s ease-in forwards;
+    animation-delay: 0ms;
+  }
+  h3 {
+    color: var(--text-primary);
+    margin-bottom: 3vw;
+    animation: slideUp 1s ease-in forwards;
+    animation-delay: 0ms;
+  }
+  p {
+    font-size: calc(1rem + 0.3vw);
+    color: var(--text-highlight);
+    animation: slideUp 1s ease-in forwards;
+    animation-delay: 0ms;
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      align-items: flex-start;
+      flex-direction: column-reverse;
+    }
+    .image-wrapper {
+      position: relative;
+      width: 40%;
+      margin-block-end: 4rem;
+      img {
+        border-radius: var(--bs-border-radius);
+      }
+      &::after {
+        top: 1rem;
+        left: 1rem;
+        border-radius: var(--bs-border-radius);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .image-wrapper {
+      width: 50%;
+    }
+  }
+}

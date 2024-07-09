@@ -1,5 +1,8 @@
 import { Nav } from "react-bootstrap";
+
 import { socialsList } from "utils/config";
+
+import "styles/components/socials.css";
 
 const Socials = () => {
   return (

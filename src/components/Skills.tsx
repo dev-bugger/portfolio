@@ -10,6 +10,8 @@ import {
 
 import { serviceList, skillList } from "utils/config";
 
+import "styles/components/skills.css";
+
 const Skills = () => {
   return (
     <section id="skills">

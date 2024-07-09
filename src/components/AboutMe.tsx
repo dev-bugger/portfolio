@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-bootstrap";
 import { calculateExperience } from "utils/common";
 
+import "styles/components/aboutme.css";
+
 const AboutMe = () => {
   const experience = React.useMemo(calculateExperience, []);
 
@@ -11,9 +13,9 @@ const AboutMe = () => {
 
       <p>
         I'm a seasoned full-stack developer with{" "}
-        <b className="fc-green">{experience} years</b>
+        <b className="highlight">{experience} years</b>
         <b> of experience</b>, specializing in{" "}
-        <b className="fc-green">frontend development</b>. I thrive on the
+        <b className="highlight">frontend development</b>. I thrive on the
         challenges of crafting <i>sleek user interfaces</i>, diving deep into
         code, and tackling tricky bugs to bring new features to life.
       </p>
@@ -31,7 +33,7 @@ const AboutMe = () => {
         <NavLink
           href="https://www.visa.com/"
           target="_blank"
-          className="d-inline-flex fc-green"
+          className="d-inline-flex highlight"
         >
           Visa
         </NavLink>

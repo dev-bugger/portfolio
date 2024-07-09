@@ -4,6 +4,8 @@ import { ReactComponent as LinkIcon } from "assets/link.svg";
 import { ReactComponent as WorkIcon } from "assets/work.svg";
 import { jobList } from "utils/config";
 
+import "styles/components/experience.css";
+
 const Experience = () => {
   return (
     <section id="experience">
@@ -24,11 +26,7 @@ const Experience = () => {
               lg={4}
             >
               {jobNum.title}&nbsp;
-              <Card.Link
-                className="fc-green"
-                href={jobNum.company.href}
-                target="_blank"
-              >
+              <Card.Link href={jobNum.company.href} target="_blank">
                 @{jobNum.company.label}
                 <LinkIcon />
               </Card.Link>

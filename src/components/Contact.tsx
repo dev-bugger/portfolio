@@ -1,5 +1,8 @@
-import { ReactComponent as ChatIcon } from "assets/chat.svg";
 import { Button } from "react-bootstrap";
+
+import { ReactComponent as ChatIcon } from "assets/chat.svg";
+
+import "styles/components/contact.css";
 
 const Contact = () => {
   return (

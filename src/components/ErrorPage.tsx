@@ -1,6 +1,9 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+
 import { ReactComponent as BugIcon } from "assets/bug.svg";
+
+import "styles/components/errorBoundary.css";
 
 const ErrorPage = () => {
   const handleRefresh = React.useCallback(() => {
