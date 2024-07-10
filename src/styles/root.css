@@ -163,3 +163,25 @@ ul.arrow-list {
     }
   }
 }
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s linear;
+  z-index: 1040;
+
+  .spinner-border {
+    --bs-spinner-width: 4rem;
+    --bs-spinner-height: 4rem;
+    --bs-spinner-border-width: 0.5rem;
+    color: var(--text-highlight);
+  }
+}
