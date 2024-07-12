@@ -5,17 +5,26 @@ import Loader from "components/Loader";
 import Socials from "components/Socials";
 
 const View: React.FC<ViewProps> = ({ children }) => {
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, [setLoading]);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
-    <>
-      <Loader />
-      <div className="view">
-        <Header />
-        <section className="overflow-hidden d-flex flex-grow-1">
-          <Socials />
-          <main className="flex-grow-1 app-body">{children}</main>
-        </section>
-      </div>
-    </>
+    <div className="view">
+      <Header />
+      <section className="overflow-hidden d-flex flex-grow-1">
+        <Socials />
+        <main className="flex-grow-1 app-body">{children}</main>
+      </section>
+    </div>
   );
 };
 

@@ -182,6 +182,12 @@ ul.arrow-list {
     --bs-spinner-width: 4rem;
     --bs-spinner-height: 4rem;
     --bs-spinner-border-width: 0.5rem;
-    color: var(--text-highlight);
+  }
+
+  .spinner-grow,
+  .spinner-border {
+    --bs-spinner-animation-speed: 2s;
+    --bs-spinner-width: 3rem;
+    --bs-spinner-height: 3rem;
   }
 }

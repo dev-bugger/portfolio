@@ -8,6 +8,9 @@
   --bs-navbar-active-color: var(--text-secondary);
   --bs-navbar-toggler-focus-width: 0.0625rem;
 }
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 .nav-link {
   --bs-nav-link-color: var(--text-tertiary);
   --bs-nav-link-hover-color: var(--text-secondary);
@@ -78,4 +81,9 @@
 
 .offcanvas {
   --bs-offcanvas-border-color: transparent;
+}
+
+.spinner-grow,
+.spinner-border {
+  color: var(--text-highlight);
 }

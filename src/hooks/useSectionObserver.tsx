@@ -12,8 +12,7 @@ const useSectionObserver = (
     const observerOptions: IntersectionObserverInit = {
       root: null,
       rootMargin: "0px 0px -20% 0px",
-      //   rootMargin: "0px 0px -80% 0px", // Adjusting to recognize 20% in view
-      threshold: 0.2, // 50% threshold
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver((entries) => {
