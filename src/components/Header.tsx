@@ -1,26 +1,35 @@
-import { memo } from "react";
+import React, { memo } from "react";
 import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import logo from "assets/logo.png";
 import resume from "assets/resume.pdf";
-import { isRouteActive } from "utils/common";
-import { headerNavList } from "utils/config";
+import { headerNavList, sectionIds } from "utils/config";
 
 import "styles/components/header.css";
+import SmoothScrollLink from "./SmoothScrollLink";
+import useSectionObserver from "hooks/useSectionObserver";
 
 const Header = () => {
-  const location = useLocation();
+  const [show, setShow] = React.useState(false);
+  const [activeLink, setActiveLink] = React.useState<string>("");
+
+  const handleClose = React.useCallback(() => setShow(false), [setShow]);
+  const handleShow = React.useCallback(() => setShow(true), [setShow]);
+
+  useSectionObserver(sectionIds, setActiveLink);
+
+  const handleLinkClick = React.useCallback(
+    (_e: any, linkId: string) => {
+      setShow(false);
+
+      setActiveLink(linkId);
+    },
+    [setShow]
+  );
 
   return (
-    <Navbar
-      id="header"
-      as="header"
-      sticky="top"
-      collapseOnSelect
-      expand="md"
-      className="p-0"
-    >
+    <Navbar id="header" as="header" expand="md" className="p-0" sticky="top">
       <Container fluid>
         <Navbar.Brand
           className="d-flex align-items-center"
@@ -29,24 +38,24 @@ const Header = () => {
         >
           <img src={logo} alt="logo" className="logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           className="nav-drawer"
           aria-label="navigation"
+          show={show}
+          onHide={handleClose}
         >
           <Offcanvas.Body>
             <Nav className="nav-list">
               {headerNavList.map(({ label, to }) => (
                 <Nav.Item
                   key={label}
-                  className={
-                    isRouteActive(to, location.pathname) ? "active" : ""
-                  }
+                  className={activeLink === to ? "active" : ""}
                 >
-                  <Nav.Link as={Link} to={to}>
+                  <SmoothScrollLink to={to} onClick={handleLinkClick}>
                     {label}
-                  </Nav.Link>
+                  </SmoothScrollLink>
                 </Nav.Item>
               ))}
               <Nav.Item>

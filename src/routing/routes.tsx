@@ -19,23 +19,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: "/",
-        lazy: () => resolveLazy(import("components/Intro")),
-      },
-      {
-        path: "about",
-        lazy: () => resolveLazy(import("components/AboutMe")),
-      },
-      {
-        path: "experience",
-        lazy: () => resolveLazy(import("components/Experience")),
-      },
-      {
-        path: "skills",
-        lazy: () => resolveLazy(import("components/Skills")),
-      },
-      {
-        path: "contact",
-        lazy: () => resolveLazy(import("components/Contact")),
+        lazy: () => resolveLazy(import("view/Sections")),
       },
       {
         path: "*",

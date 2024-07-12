@@ -1,14 +1,14 @@
 import React, { memo } from "react";
 
 import Header from "components/Header";
-import Socials from "components/Socials";
 import Loader from "components/Loader";
+import Socials from "components/Socials";
 
 const View: React.FC<ViewProps> = ({ children }) => {
   return (
     <>
       <Loader />
-      <div className="d-flex flex-column h-100 w-100 view">
+      <div className="view">
         <Header />
         <section className="overflow-hidden d-flex flex-grow-1">
           <Socials />

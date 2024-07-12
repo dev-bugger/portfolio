@@ -1,15 +1,15 @@
+import { ReactComponent as BackendIcon } from "assets/backend.svg";
 import { ReactComponent as CodeIcon } from "assets/code.svg";
 import { ReactComponent as ComputerIcon } from "assets/computer.svg";
 import { ReactComponent as DatabaseIcon } from "assets/database.svg";
+import { ReactComponent as MailIcon } from "assets/email.svg";
+import { ReactComponent as FrontendIcon } from "assets/frontend.svg";
 import { ReactComponent as GitHubIcon } from "assets/github.svg";
 import { ReactComponent as InstagramIcon } from "assets/instagram.svg";
 import { ReactComponent as LinkedInIcon } from "assets/linkedIn.svg";
-import { ReactComponent as MailIcon } from "assets/email.svg";
 import { ReactComponent as ToolsIcon } from "assets/tools.svg";
-import { TCompanyRecord, TJobList, TSkillList } from "types/config.types";
 import { ReactComponent as WebDevIcon } from "assets/web-dev.svg";
-import { ReactComponent as FrontendIcon } from "assets/frontend.svg";
-import { ReactComponent as BackendIcon } from "assets/backend.svg";
+import { TCompanyRecord, TJobList, TSkillList } from "types/config.types";
 
 const companies: TCompanyRecord = {
   visa: {
@@ -271,26 +271,26 @@ export const serviceList = [
 export const headerNavList = [
   {
     label: "About",
-    to: "/about",
+    to: "about",
   },
   {
     label: "Experience",
-    to: "/experience",
+    to: "experience",
   },
   {
     label: "Skills",
-    to: "/skills",
+    to: "skills",
   },
   {
     label: "Contact",
-    to: "/contact",
+    to: "contact",
   },
 ];
 
 export const socialsList = [
   {
     label: "GitHub",
-    href: "https://github.com/dev-bugger/",
+    href: "https:/github.com/dev-bugger/",
     Icon: GitHubIcon,
   },
   {
@@ -309,3 +309,5 @@ export const socialsList = [
     Icon: MailIcon,
   },
 ];
+
+export const sectionIds = ["home", "about", "experience", "skills", "contact"];
