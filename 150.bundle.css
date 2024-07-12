@@ -1,1 +1,0 @@
-#about{.numbered-list:before{content:"01."}a{&.nav-link{--bs-nav-link-color:var(--text-highlight);&:hover{--bs-nav-link-hover-color:var(--text-highlight);text-decoration:underline}}}}
