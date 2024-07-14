@@ -33,8 +33,9 @@ const Header = () => {
       <Container fluid>
         <Navbar.Brand
           className="d-flex align-items-center"
-          as={Link}
-          to="/home"
+          as={SmoothScrollLink}
+          to="home"
+          onClick={handleLinkClick as any}
         >
           <img src={logo} alt="logo" className="logo" />
         </Navbar.Brand>

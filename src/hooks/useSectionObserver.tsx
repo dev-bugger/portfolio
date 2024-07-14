@@ -5,9 +5,6 @@ const useSectionObserver = (
   setActiveLink: (id: string) => void
 ) => {
   useEffect(() => {
-    if (window.innerWidth < 768) {
-      return;
-    }
     const sections = sectionIds.map((id) => document.getElementById(id));
     const observerOptions: IntersectionObserverInit = {
       root: null,

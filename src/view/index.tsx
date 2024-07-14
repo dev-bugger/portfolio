@@ -18,7 +18,7 @@ const View: React.FC<ViewProps> = ({ children }) => {
   }
 
   return (
-    <div className="view">
+    <div className="view" id="view">
       <Header />
       <section className="overflow-hidden d-flex flex-grow-1">
         <Socials />

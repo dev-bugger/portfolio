@@ -22,6 +22,9 @@
   --font-family-sub-heading: "Rajdhani", sans-serif;
 
   --text-body: var(--text-primary);
+  --bg-primary: #0a192f;
+  --bg-primary-light: #112240;
+  --bg-primary-lightest: #233554;
   --app-background: linear-gradient(
     to right,
     var(--bg-primary),
@@ -115,8 +118,26 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-inline: 10%;
     padding-block: 2rem;
+    padding-inline: 10%;
+  }
+
+  & > :nth-child(even):not(:first-child) {
+    padding-inline: 10%;
+  }
+
+  & > :nth-child(odd) {
+    padding-inline: 20%;
+  }
+
+  @media (max-width: 768px) {
+    & > :nth-child(even):not(:first-child) {
+      padding-inline: 10%;
+    }
+
+    & > :nth-child(odd) {
+      padding-inline: 10%;
+    }
   }
 }
 

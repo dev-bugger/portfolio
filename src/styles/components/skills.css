@@ -2,11 +2,10 @@
   .numbered-list::before {
     content: "03.";
   }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+
+  .skills-row {
+    align-items: center;
+    row-gap: 2rem;
   }
   .card {
     .card-title {
@@ -16,16 +15,13 @@
     }
   }
   .group-container {
-    &.row > * {
-      --bs-gutter-y: 1rem;
-    }
     .card {
       --bs-card-bg: var(--card-bg-hover-color);
       --bs-card-border-color: var(--text-highlight-tint);
       filter: drop-shadow(0 0.875rem 0.5rem rgba(0, 0, 0, 0.04))
         drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
       transition: box-shadow 0.3s ease, transform 0.3s ease;
-      height: 12rem;
+      height: 15rem;
       min-height: fit-content;
       .card-body {
         display: flex;

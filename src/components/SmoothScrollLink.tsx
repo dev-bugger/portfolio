@@ -17,9 +17,19 @@ const SmoothScrollLink: React.FC<SmoothScrollLinkProps> = ({
         event.preventDefault();
         event.stopPropagation();
 
-        const element = document.querySelector(href);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+        const [view, header, element] = [
+          document.getElementById("view"),
+          document.getElementById("header"),
+          document.getElementById(to),
+        ];
+
+        const offsetTop = header?.offsetHeight ?? 0;
+        if (view && element) {
+          view.scrollTo({
+            top: element.offsetTop - offsetTop,
+            behavior: "smooth",
+          });
+          // element.scrollIntoView({ behavior: "smooth" });
         }
       }
       onClick?.(event, to);
