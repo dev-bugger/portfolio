@@ -11,7 +11,8 @@
   }
   &.hidden {
     transform: translateY(calc(var(--app-header-height) * -1));
-    transition: transform ease-in-out 0.4s;
+    height: 0;
+    transition: transform ease-in-out 0.4s, height ease-in-out 0.4s;
   }
 }
 
