@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 
-import { ReactComponent as LogoIcon } from "assets/logo.svg";
+import logo from "assets/logo.png";
 import resume from "assets/resume.pdf";
 import useScrollHideHeader from "hooks/useScrollHideHeader";
 import useSectionObserver from "hooks/useSectionObserver";
@@ -47,7 +47,7 @@ const Header = () => {
             to="home"
             onClick={handleLinkClick as any}
           >
-            <LogoIcon className="logo" />
+            <img src={logo} alt="logo" className="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow} />
           <Navbar.Offcanvas
@@ -83,7 +83,11 @@ const Header = () => {
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
-      <NavWidget activeLink={activeLink} hidden={!isHeaderHidden} />
+      <NavWidget
+        activeLink={activeLink}
+        hidden={!isHeaderHidden}
+        onLinkClick={handleLinkClick}
+      />
     </>
   );
 };

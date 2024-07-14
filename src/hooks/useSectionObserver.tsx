@@ -7,8 +7,8 @@ const useSectionObserver = (
   useEffect(() => {
     const sections = sectionIds.map((id) => document.getElementById(id));
     const observerOptions: IntersectionObserverInit = {
-      root: null,
-      rootMargin: "0px 0px -20% 0px",
+      root: document.getElementById("main"),
+      rootMargin: "0px",
       threshold: 0.2,
     };
 

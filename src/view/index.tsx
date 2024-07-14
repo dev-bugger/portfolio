@@ -23,9 +23,11 @@ const View: React.FC<ViewProps> = ({ children }) => {
       <CursorTracker />
       <div className="view" id="view">
         <Header />
-        <section className="overflow-hidden d-flex flex-grow-1">
+        <section className="d-flex flex-grow-1">
           <Socials />
-          <main className="flex-grow-1 app-body">{children}</main>
+          <main className="flex-grow-1" id="main">
+            {children}
+          </main>
         </section>
       </div>
     </>

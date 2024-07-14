@@ -11,33 +11,39 @@ import Divider from "./Divider";
 import SmoothScrollLink from "./SmoothScrollLink";
 import Tooltip from "./Tooltip";
 
-const NavWidget: React.FC<NavWidgetProps> = ({ activeLink, hidden }) => {
+const NavWidget: React.FC<NavWidgetProps> = ({
+  activeLink,
+  hidden,
+  onLinkClick,
+}) => {
   return (
     <div id="nav-widget" className={`${hidden ? "hidden" : ""}`}>
       <Nav>
         <Nav.Item>
-          <Nav.Link
-            as={SmoothScrollLink}
+          <SmoothScrollLink
             to="home"
             className={`${activeLink === "home" ? "active" : ""}`}
+            onClick={onLinkClick}
           >
             <Tooltip title="Home">
               <HomeIcon />
             </Tooltip>
-          </Nav.Link>
+          </SmoothScrollLink>
         </Nav.Item>
         <Divider />
         {headerNavList.map(({ Icon, label, to }) => (
-          <Nav.Link
-            key={label}
-            as={SmoothScrollLink}
-            to={to}
-            className={`${activeLink === to ? "active" : ""}`}
-          >
-            <Tooltip title={label}>
-              <Icon />
-            </Tooltip>
-          </Nav.Link>
+          <Nav.Item>
+            <SmoothScrollLink
+              key={label}
+              to={to}
+              className={`${activeLink === to ? "active" : ""}`}
+              onClick={onLinkClick}
+            >
+              <Tooltip title={label}>
+                <Icon />
+              </Tooltip>
+            </SmoothScrollLink>
+          </Nav.Item>
         ))}
         <Divider />
         <Nav.Item>
@@ -55,6 +61,7 @@ const NavWidget: React.FC<NavWidgetProps> = ({ activeLink, hidden }) => {
 type NavWidgetProps = {
   activeLink: string;
   hidden: boolean;
+  onLinkClick: (event: any, linkTo: string) => void;
 };
 
 export default NavWidget;

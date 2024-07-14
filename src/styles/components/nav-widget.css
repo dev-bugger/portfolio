@@ -18,9 +18,20 @@
     border: 0.0625rem solid var(--text-highlight);
     border-radius: 1rem;
     background: var(--app-background);
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
   }
   .active {
     color: var(--text-highlight);
+  }
+
+  .nav-item {
+    &:hover {
+      transform: translate(-0.125rem, -0.125rem);
+      transition: transform 0.3s ease-in-out;
+    }
   }
   @media (max-width: 768px) {
     bottom: calc(0.25rem + var(--socials-nav-height));

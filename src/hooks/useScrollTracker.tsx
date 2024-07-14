@@ -4,7 +4,7 @@ function useScrollTracker() {
   const [scrollPosition, setScrollPosition] = useState({ y: 0 });
 
   useEffect(() => {
-    const element = document.getElementById("view");
+    const element = document.getElementById("main");
     const handleScroll = () => {
       if (element) {
         setScrollPosition({
