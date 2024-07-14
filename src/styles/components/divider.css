@@ -1,0 +1,10 @@
+.divider {
+  align-self: stretch;
+  hr {
+    opacity: 1;
+    background-color: var(--text-highlight);
+    height: 100%;
+    width: 0.0625rem;
+    margin: 0;
+  }
+}

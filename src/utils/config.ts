@@ -9,6 +9,10 @@ import { ReactComponent as InstagramIcon } from "assets/instagram.svg";
 import { ReactComponent as LinkedInIcon } from "assets/linkedIn.svg";
 import { ReactComponent as ToolsIcon } from "assets/tools.svg";
 import { ReactComponent as WebDevIcon } from "assets/web-dev.svg";
+import { ReactComponent as PersonIcon } from "assets/person.svg";
+import { ReactComponent as WorkIcon } from "assets/work.svg";
+import { ReactComponent as ChatIcon } from "assets/chat.svg";
+
 import { TCompanyRecord, TJobList, TSkillList } from "types/config.types";
 
 const companies: TCompanyRecord = {
@@ -272,18 +276,22 @@ export const headerNavList = [
   {
     label: "About",
     to: "about",
+    Icon: PersonIcon,
   },
   {
     label: "Experience",
     to: "experience",
+    Icon: WorkIcon,
   },
   {
     label: "Skills",
     to: "skills",
+    Icon: WebDevIcon,
   },
   {
     label: "Contact",
     to: "contact",
+    Icon: ChatIcon,
   },
 ];
 
@@ -310,4 +318,4 @@ export const socialsList = [
   },
 ];
 
-export const sectionIds = ["home", "about", "experience", "skills", "contact"];
+export const sectionIds = ["home"].concat(headerNavList.map((nav) => nav.to));

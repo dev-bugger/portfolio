@@ -36,6 +36,10 @@
 
   --transition-duration: 0.15s;
   --transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  --socials-nav-height: 3.5rem;
+  --app-header-height: 4rem;
+  --social-nav-width: 4rem;
 }
 
 ::-webkit-scrollbar {
@@ -112,31 +116,49 @@ h6 {
 }
 
 main {
+  --section-offset: 0px;
+  --section-padding-inline: 10%;
   > section {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--section-offset));
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-block: 2rem;
-    padding-inline: 10%;
+    padding-inline: var(--section-padding-inline);
   }
 
-  & > :nth-child(even):not(:first-child) {
-    padding-inline: 10%;
+  & > :first-child {
+    --section-offset: var(--app-header-height);
   }
 
-  & > :nth-child(odd) {
-    padding-inline: 20%;
+  & > :last-child {
+    margin-bottom: var(--section-offset);
+  }
+
+  & > :nth-child(even) {
+    --section-padding-inline: 10%;
+  }
+
+  & > :nth-child(odd):not(:first-child) {
+    --section-padding-inline: 20%;
   }
 
   @media (max-width: 768px) {
-    & > :nth-child(even):not(:first-child) {
-      padding-inline: 10%;
+    > section {
+      --section-offset: var(--socials-nav-height);
+    }
+    & > :first-child {
+      --section-offset: calc(
+        var(--socials-nav-height) + var(--app-header-height)
+      );
+    }
+    & > :nth-child(odd):not(:first-child) {
+      --section-padding-inline: 10%;
     }
 
-    & > :nth-child(odd) {
-      padding-inline: 10%;
+    & > :nth-child(even) {
+      --section-padding-inline: 10%;
     }
   }
 }

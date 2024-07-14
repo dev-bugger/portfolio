@@ -1,0 +1,28 @@
+#nav-widget {
+  position: fixed;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1021;
+  --nav-widget-height: 3rem;
+  &.hidden {
+    bottom: 0;
+    transform: translate(-50%, var(--nav-widget-height));
+    transition: transform 0.3s ease-in-out;
+  }
+  .nav {
+    border: 0.0625rem solid var(--text-highlight);
+    border-radius: 1rem;
+    background: var(--app-background);
+  }
+  .active {
+    color: var(--text-highlight);
+  }
+  @media (max-width: 768px) {
+    bottom: calc(0.25rem + var(--socials-nav-height));
+  }
+}

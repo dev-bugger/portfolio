@@ -23,7 +23,7 @@ const SmoothScrollLink: React.FC<SmoothScrollLinkProps> = ({
           document.getElementById(to),
         ];
 
-        const offsetTop = header?.offsetHeight ?? 0;
+        const offsetTop = to === "home" ? header?.offsetHeight ?? 0 : 0;
         if (view && element) {
           view.scrollTo({
             top: element.offsetTop - offsetTop,

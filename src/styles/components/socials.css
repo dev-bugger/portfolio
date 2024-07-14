@@ -23,7 +23,7 @@
   }
   @media ((max-width: 768px)) {
     width: 100%;
-    height: fit-content;
+    height: var(--socials-nav-height);
     bottom: 0;
     background: var(--app-background);
     box-shadow: 0px -0.25rem 0.625rem rgba(0, 0, 0, 0.1);

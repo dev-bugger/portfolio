@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 
+import CursorTracker from "components/Cursor";
 import Header from "components/Header";
 import Loader from "components/Loader";
 import Socials from "components/Socials";
@@ -18,13 +19,16 @@ const View: React.FC<ViewProps> = ({ children }) => {
   }
 
   return (
-    <div className="view" id="view">
-      <Header />
-      <section className="overflow-hidden d-flex flex-grow-1">
-        <Socials />
-        <main className="flex-grow-1 app-body">{children}</main>
-      </section>
-    </div>
+    <>
+      <CursorTracker />
+      <div className="view" id="view">
+        <Header />
+        <section className="overflow-hidden d-flex flex-grow-1">
+          <Socials />
+          <main className="flex-grow-1 app-body">{children}</main>
+        </section>
+      </div>
+    </>
   );
 };
 

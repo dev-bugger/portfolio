@@ -1,9 +1,18 @@
 #header {
   background: var(--app-background);
-  border-bottom: 0.0625rem solid var(--text-highlight-tint);
+  border: none;
+  height: var(--app-header-height);
   .logo {
     height: 3rem;
     width: 3rem;
+    &:hover {
+      border: 0.125rem solid var(--text-highlight);
+      transition: border ease-in-out 0.3s;
+    }
+  }
+  &.hidden {
+    transform: translateY(calc(var(--app-header-height) * -1));
+    transition: transform ease-in-out 0.4s;
   }
 }
 
