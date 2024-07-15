@@ -10,7 +10,7 @@ const Intro = () => {
     <section id="home">
       <Row className="container">
         <Col xs={12} sm={12} md={12} lg={8} xl={8}>
-          <h4>Namaste 🙏, I am</h4>
+          <h6>Namaste 🙏, I am</h6>
           <h1>Anjali Rawat.</h1>
           <h3>I build things for the web.</h3>
           <p className="d-inline fw-bold">

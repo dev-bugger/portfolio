@@ -37,11 +37,12 @@
       }
     }
   }
-  h4 {
-    color: var(--text-highlight);
+  h6 {
+    color: var(--text-body);
     animation: slideDown 1s ease-in forwards;
     animation-delay: 0ms;
     font-family: var(--font-family-body);
+    letter-spacing: 0.125rem;
   }
   h1 {
     color: var(--text-white);
