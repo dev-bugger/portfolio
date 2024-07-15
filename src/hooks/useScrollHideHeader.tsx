@@ -10,6 +10,7 @@ function useScrollHideHeader(headerRef: React.RefObject<HTMLElement>) {
 
       return scrollY > headerHeight;
     }
+    return false;
   }, [headerRef, scrollY]);
 
   return isHeaderHidden;

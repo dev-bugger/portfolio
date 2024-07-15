@@ -1,17 +1,20 @@
 import React, { memo } from "react";
 
 import CursorTracker from "components/Cursor";
-import Header from "components/Header";
 import Loader from "components/Loader";
+import Navigation from "components/Navigation";
 import Socials from "components/Socials";
 
 const View: React.FC<ViewProps> = ({ children }) => {
+  const [, startTransition] = React.useTransition();
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+      startTransition(() => {
+        setLoading(false);
+      });
+    }, 2000);
   }, [setLoading]);
 
   if (loading) {
@@ -22,7 +25,7 @@ const View: React.FC<ViewProps> = ({ children }) => {
     <>
       <CursorTracker />
       <div className="view" id="view">
-        <Header />
+        <Navigation />
         <section className="d-flex flex-grow-1">
           <Socials />
           <main className="flex-grow-1" id="main">

@@ -1,15 +1,15 @@
+import React from "react";
 import { Nav } from "react-bootstrap";
 
 import { ReactComponent as BookIcon } from "assets/book.svg";
 import { ReactComponent as HomeIcon } from "assets/home.svg";
 import resume from "assets/resume.pdf";
-
-import React from "react";
-import "styles/components/nav-widget.css";
 import { headerNavList } from "utils/config";
 import Divider from "./Divider";
 import SmoothScrollLink from "./SmoothScrollLink";
 import Tooltip from "./Tooltip";
+
+import "styles/components/nav-widget.css";
 
 const NavWidget: React.FC<NavWidgetProps> = ({
   activeLink,
@@ -32,7 +32,7 @@ const NavWidget: React.FC<NavWidgetProps> = ({
         </Nav.Item>
         <Divider />
         {headerNavList.map(({ Icon, label, to }) => (
-          <Nav.Item>
+          <Nav.Item key={`nav-widget-link--${label}`}>
             <SmoothScrollLink
               key={label}
               to={to}

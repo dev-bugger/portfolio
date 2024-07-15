@@ -15,7 +15,7 @@
     transition: transform 0.3s ease-in-out;
   }
   .nav {
-    border: 0.0625rem solid var(--text-highlight);
+    border: 0.0625rem solid var(--text-highlight-tint);
     border-radius: 1rem;
     background: var(--app-background);
     &:hover {
