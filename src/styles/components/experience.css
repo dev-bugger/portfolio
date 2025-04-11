@@ -1,0 +1,58 @@
+#experience {
+  .numbered-list::before {
+    content: "02.";
+  }
+
+  .container {
+    ul {
+      color: var(--text-tertiary);
+      font-size: 0.875rem;
+    }
+    .card-link {
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      margin-bottom: 0.25rem;
+    }
+    .card {
+      flex-direction: row;
+      color: var(--text-white);
+      --bs-card-border-color: transparent;
+      padding: 1rem;
+      .card-title {
+        font-weight: 300;
+        font-size: 0.875rem;
+        h6 {
+          color: var(--text-primary);
+        }
+        span {
+          font-size: 0.875rem;
+          color: var(--text-secondary);
+        }
+      }
+      .card-link {
+        color: var(--text-highlight);
+      }
+      .card-body {
+        padding: 0;
+      }
+      &:hover {
+        --bs-card-bg: var(--card-bg-hover-color);
+        --bs-card-border-color: var(--text-highlight-tint);
+        filter: drop-shadow(0 0.875rem 0.5rem rgba(0, 0, 0, 0.04))
+          drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.1));
+        svg {
+          scale: 1.25;
+        }
+      }
+      .badge-list {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

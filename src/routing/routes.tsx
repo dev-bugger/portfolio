@@ -1,31 +1,47 @@
-import withLayout from "HOC/withLayout";
-import { AboutMe, Contact, Experience, Intro, Skills } from "components";
-import { Navigate, RouteObject } from "react-router-dom";
+import ErrorPage from "components/ErrorPage";
+import { Navigate, Outlet, RouteObject } from "react-router-dom";
+import { resolveLazy } from "utils/common";
+import View from "view";
 
 const routes: RouteObject[] = [
   {
     path: "/",
-    Component: withLayout(Intro),
-  },
-  {
-    path: "about",
-    Component: withLayout(AboutMe),
-  },
-  {
-    path: "experience",
-    Component: withLayout(Experience),
-  },
-  {
-    path: "skills",
-    Component: withLayout(Skills),
-  },
-  {
-    path: "contact",
-    Component: withLayout(Contact),
-  },
-  {
-    path: "*",
-    element: <Navigate to="/" replace />,
+    element: (
+      <View>
+        <Outlet />
+      </View>
+    ),
+    errorElement: (
+      <View>
+        <ErrorPage />
+      </View>
+    ),
+    children: [
+      {
+        path: "/",
+        lazy: () => resolveLazy(import("components/Intro")),
+      },
+      {
+        path: "about",
+        lazy: () => resolveLazy(import("components/AboutMe")),
+      },
+      {
+        path: "experience",
+        lazy: () => resolveLazy(import("components/Experience")),
+      },
+      {
+        path: "skills",
+        lazy: () => resolveLazy(import("components/Skills")),
+      },
+      {
+        path: "contact",
+        lazy: () => resolveLazy(import("components/Contact")),
+      },
+      {
+        path: "*",
+        element: <Navigate to="/" replace />,
+      },
+    ],
   },
 ];
 

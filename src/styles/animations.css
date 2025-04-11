@@ -1,8 +1,108 @@
-@keyframes fadeInAnimation {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes letterSpacing {
+  0% {
+    letter-spacing: normal; /* Initial letter spacing */
+  }
+  50% {
+    letter-spacing: 0.25rem; /* Increased letter spacing */
+  }
+  100% {
+    letter-spacing: normal; /* Return to normal letter spacing */
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(100, 255, 218, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 1.25rem rgba(100, 255, 218, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(100, 255, 218, 0.2);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg); /* Initial and final state */
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-0.625rem) rotate(-5deg); /* Leftward shake and tilt */
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(0.625rem) rotate(5deg); /* Rightward shake and tilt */
   }
 }

@@ -1,0 +1,11 @@
+#errorBoundary {
+  align-items: center;
+  text-align: center;
+  button {
+    animation: shake 1s ease-in-out;
+    &:hover {
+      transform: scale(1.25);
+      transition: transform 0.5s;
+    }
+  }
+}

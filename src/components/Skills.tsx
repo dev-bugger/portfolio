@@ -1,29 +1,68 @@
-import { Card, Col, Row } from "react-bootstrap";
+import { memo } from "react";
+import {
+  Card,
+  Col,
+  Container,
+  Image,
+  ProgressBar,
+  Row,
+  Stack,
+} from "react-bootstrap";
 
-import { skillList } from "utils/config";
+import { serviceList, skillList } from "utils/config";
+
+import "styles/components/skills.css";
 
 const Skills = () => {
   return (
     <section id="skills">
       <h3 className="numbered-list">Skills & Superpowers</h3>
-      <Row className="justify-content-center">
-        {skillList.map((tab) => (
-          <Col xs={12} sm={4} md={4} lg={3} xl={3} key={tab.label}>
-            <Card className="mb-4">
-              <Card.Body className="align-items-center justify-content-center d-flex flex-column">
-                <Card.Img
-                  src={tab.icon}
-                  alt={`${tab.label} logo`}
-                  className="mb-2 logo"
-                />
-                <Card.Title className="mb-0 text-muted">{tab.label}</Card.Title>
-              </Card.Body>
-            </Card>
+
+      <Container as="ul" className="arrow-list">
+        <Row as={Stack} gap={4}>
+          <Col>
+            <Row className="group-container">
+              {serviceList.map(({ Icon, ...service }) => (
+                <Col xs={12} sm={12} md={4} key={service.label}>
+                  <Card body>
+                    <Icon />
+                    <Card.Title as="span">{service.label}</Card.Title>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
           </Col>
-        ))}
-      </Row>
+          {skillList.map(({ Icon, ...group }) => (
+            <Col xs={12} className="skill-container" key={group.label}>
+              <Card>
+                <Card.Header>
+                  <Card.Title as="span">
+                    <Icon />
+                    {group.label}
+                  </Card.Title>
+                </Card.Header>
+                <Card.Body>
+                  <Stack gap={4} as={Container}>
+                    {group.skills.map((skill) => (
+                      <Row className="progress-div" key={skill.label}>
+                        <Col xs={12} sm={4} md={4} lg={4}>
+                          <Image src={skill.icon} roundedCircle />
+                          {skill.label}
+                        </Col>
+                        <Col xs={12} sm={8} md={8} lg={8}>
+                          <ProgressBar now={skill.percent} />
+                        </Col>
+                      </Row>
+                    ))}
+                  </Stack>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </section>
   );
 };
 
-export default Skills;
+export default memo(Skills);

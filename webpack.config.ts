@@ -1,4 +1,6 @@
 import CompressionWebpackPlugin from "compression-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin";
+import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import dotenv from "dotenv";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
@@ -6,7 +8,6 @@ import path from "path";
 import TerserWebpackPlugin from "terser-webpack-plugin";
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 import { DefinePlugin } from "webpack";
-import CopyPlugin from "copy-webpack-plugin";
 
 const envVar = dotenv.config({
   path: "./.env",
@@ -16,9 +17,10 @@ module.exports = (env) => ({
   mode: env.production ? "production" : "development",
   entry: "./src/index.tsx", // Entry point of your application
   output: {
-    filename: "bundle.js", // Output bundle file name
     path: path.resolve(__dirname, "build"), // Output directory,
     publicPath: "/portfolio/",
+    filename: "bundle.js",
+    clean: true,
   },
   module: {
     rules: [
@@ -33,7 +35,7 @@ module.exports = (env) => ({
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.svg$/i,
@@ -55,13 +57,14 @@ module.exports = (env) => ({
       new TerserWebpackPlugin({
         terserOptions: {
           compress: {
-            drop_console: true, // Drop console.* statements
+            drop_console: true,
           },
           output: {
-            comments: false, // Remove comments from output
+            comments: false,
           },
         },
       }),
+      new CssMinimizerPlugin(),
     ],
   },
   plugins: [
@@ -70,7 +73,6 @@ module.exports = (env) => ({
     }),
     new MiniCssExtractPlugin({
       filename: "bundle.css",
-      ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
     new CompressionWebpackPlugin({
       algorithm: "gzip", // or 'brotliCompress'
@@ -80,6 +82,7 @@ module.exports = (env) => ({
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      favicon: "./public/favicon.ico",
     }),
     new CopyPlugin({
       patterns: [{ from: "./public/404.html", to: "./404.html" }],

@@ -1,3 +1,8 @@
+:root {
+  --bs-border-width: 0.0625rem;
+  --bs-body-color: var(--text-body);
+  --bs-body-bg: var(--app-background);
+}
 .navbar {
   --bs-navbar-toggler-icon-bg: url("../assets/three-dots-vertical.svg");
   --bs-navbar-active-color: var(--text-secondary);
@@ -5,9 +10,7 @@
 }
 .nav-link {
   --bs-nav-link-color: var(--text-tertiary);
-}
-.nav-link:hover {
-  --bs-nav-link-hover-color: rgba(255, 255, 255, 0.577);
+  --bs-nav-link-hover-color: var(--text-secondary);
 }
 
 .btn-outline-primary {
@@ -27,7 +30,21 @@
   --bs-gradient: none;
 }
 .card {
-  --bs-card-border-width: 0.0625rem;
+  --bs-card-border-width: var(--bs-border-width);
+  --bs-card-title-color: var(--text-white);
+  --bs-card-color: var(--text-body);
+  --bs-card-bg: var(--card-bg);
+  --bs-card-border-color: var(--text-highlight);
+}
+
+.badge {
+  --bs-primary-rgb: var(--text-highlight-tint);
+  --bs-badge-border-width: var(--bs-border-width);
+  --bs-badge-border-color: var(--text-highlight-tint);
+  border: var(--bs-badge-border-width) solid var(--bs-badge-border-color);
+  background-color: var(--bs-primary-rgb) !important;
+  --bs-badge-color: var(--text-highlight);
+  --bs-badge-font-weight: 400;
 }
 
 .text-muted {
@@ -37,7 +54,7 @@
   color: var(--text-secondary) !important;
 }
 .text-tertiary {
-  color: var(--text-tertiary) !important;
+  color: var(--text-white) !important;
 }
 
 .navbar-toggler {
@@ -48,4 +65,17 @@
   --bs-navbar-toggler-border-color: var(--text-highlight);
   --bs-navbar-toggler-border-radius: 0.5rem;
   border: none;
+}
+
+.progress {
+  --bs-progress-bg: var(--text-highlight-tint);
+  height: 0.45rem;
+}
+
+.progress-bar {
+  --bs-progress-bar-bg: var(--text-highlight);
+}
+
+.offcanvas {
+  --bs-offcanvas-border-color: transparent;
 }
